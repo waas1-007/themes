@@ -1,0 +1,910 @@
+/*!
+Theme Name: Loge - Ignition
+Theme URI: https://www.cssigniter.com/themes/loge/
+Author: CSSIgniter
+Author URI: https://www.cssigniter.com/
+Description: An Ecommerce Theme for WordPress
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ignition-loge
+RequiresIgnition: 2.0.3
+*/
+
+/* -----------------------------------------
+	Table of Contents
+--------------------------------------------
+
+.. Theme Variables
+.. General / Base
+.. Forms
+.. Main Navigation
+.. Header
+.. Archives
+.. Content
+.. Blocks
+.. Widgets
+.. Pagination
+.. Footer
+.. Editor Palette
+.. Theme Colors
+*/
+
+/* -----------------------------------------
+	Base CSS Custom Properties (Variables)
+----------------------------------------- */
+
+:root {
+  --ignition-colors-grey: #f9f9f9;
+  --ignition-loge-accent-background-color: #f9f9f9;
+  --ignition-loge-border-radius-base: 0;
+  --ignition-loge-letter-spacing-base: .05em;
+  --ignition-loge-section-padding: 100px;
+}
+
+/* -----------------------------------------
+ Base theme styles
+----------------------------------------- */
+
+/* Main
+========================================= */
+
+.main {
+  padding: 80px 0 90px;
+}
+
+.content-background-wrapper {
+  position: relative;
+  padding-bottom: var(--ignition-loge-section-padding);
+}
+
+.content-wrapper {
+  padding: var(--ignition-loge-section-padding) 0 0;
+}
+
+.background-provider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--ignition-colors-grey);
+  width: calc(50% + (1140px * .33) - (30px * 3));
+  z-index: -1;
+}
+
+.without-thumbnail .background-provider {
+  width: calc(100% - (100% - 1140px)/2);
+}
+
+.background-provider.background-provider-left {
+  right: auto;
+  left: 0;
+}
+
+/* Content utilities
+========================================= */
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons
+========================================= */
+
+.btn,
+.button,
+.gutenbee-block-button-link,
+.wp-block-button__link,
+.added_to_cart,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"] {
+  padding: 10px 28px 16px 0;
+  text-transform: uppercase;
+  border-radius: 0;
+  line-height: normal;
+  border: 0;
+  min-width: 80px;
+  border-bottom: 3px solid;
+  text-align: left;
+}
+
+.is-style-outline > .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+  padding: 13px 24px;
+  color: var(--ignition-buttons-text-color);
+}
+
+/* -----------------------------------------
+	Forms Styling
+----------------------------------------- */
+
+label,
+.label {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="time"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+  border-radius: var(--ignition-loge-border-radius-base);
+}
+
+.select2-container.select2-container--default .select2-selection--multiple,
+.select2-container.select2-container--default .select2-selection--single,
+.select2-container.select2-container--default .select2-selection--multiple,
+.select2-container.select2-container--default .select2-selection--single {
+  border-radius: var(--ignition-loge-border-radius-base);
+}
+
+/* -----------------------------------------
+	Navigation
+----------------------------------------- */
+
+/* Main Navigation
+========================================= */
+
+.navigation-main ul {
+  padding: 15px 5px;
+  border-radius: 0;
+  min-width: 220px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+}
+
+.navigation-main a {
+  font-size: 1em;
+}
+
+.navigation-main > li > a {
+  padding: 10px 0;
+  margin: 0 16px;
+  position: relative;
+  color: currentColor;
+}
+
+.navigation-main > li > a::before {
+  content: "";
+  border-bottom: 3px solid transparent;
+  transition: border-color .18s ease;
+  display: block;
+  position: absolute;
+  left: -4px;
+  bottom: 0;
+  width: calc(100% + 8px);
+}
+
+.navigation-main li li a {
+  padding: 6px 15px;
+}
+
+.navigation-main .nav-button > a::before {
+  display: none;
+}
+
+/* Mobile Navigation
+========================================= */
+
+.mobile-nav-trigger {
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+/* -----------------------------------------
+ Header
+----------------------------------------- */
+
+/* Top bar
+========================================= */
+
+.head-intro-inner {
+  padding: 10px 0;
+}
+
+/* Mast head
+========================================= */
+
+.head-mast {
+  font-size: 16px;
+}
+
+.head-mast-inner {
+  padding: 22px 0;
+}
+
+/* Branding
+========================================= */
+
+.site-logo {
+  font-size: 28px;
+  letter-spacing: var(--ignition-loge-letter-spacing-base);
+  text-transform: uppercase;
+}
+
+/* Page hero
+========================================= */
+
+.page-hero-content .page-hero-title {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.page-hero-content .page-hero-title:last-child {
+  margin-bottom: 0;
+}
+
+.page-hero-content .page-hero-subtitle {
+  margin: 5px 0 0;
+  line-height: 1.45;
+}
+
+/* Page title (in content)
+========================================= */
+
+.page-title-wrap {
+  margin-bottom: 50px;
+}
+
+.page-title-content .page-title {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.page-title-content .page-title::after {
+  content: "";
+  display: block;
+  width: 15px;
+  margin: 10px 0;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.page-title-content .page-title:last-child {
+  margin-bottom: 0;
+}
+
+.page-title-content .page-subtitle {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.page-title-align-center .page-title-content .page-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title-align-right .page-title-content .page-title::after {
+  margin-left: auto;
+}
+
+.page-title-description,
+.page-subtitle,
+.page-hero-subtitle {
+  font-size: 16px;
+}
+
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+
+.entry-featured {
+  margin-bottom: 100px;
+}
+
+.entry-item-content {
+  text-align: left;
+}
+
+.entry-item-title {
+  text-transform: none;
+  font-size: 16px;
+  font-weight: var(--ignition-font-weight-bold);
+  letter-spacing: var(--ignition-loge-letter-spacing-base);
+}
+
+.entry-item-title + .entry-meta {
+  margin: -15px 0 20px;
+}
+
+.entry-meta {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+
+.entry-title {
+  font-size: 28px;
+}
+
+.entry-section-title::after {
+  content: "";
+  display: block;
+  width: 15px;
+  margin: 10px 0;
+  height: 1px;
+  background-color: currentColor;
+}
+
+/* Item filters
+========================================= */
+
+.ci-item-filter.filter-active {
+  color: var(--ignition-colors-white);
+}
+
+/* -----------------------------------------
+ Content Styles
+----------------------------------------- */
+
+/* General
+========================================= */
+
+.entry-content > * {
+  margin-bottom: 30px;
+}
+
+.entry-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin-bottom: 20px;
+}
+
+> .entry-content:last-child {
+  margin-bottom: 0;
+}
+
+.entry-content .entry-title {
+  margin-bottom: 0;
+}
+
+.entry-section {
+  border: 0;
+  margin: 100px 0 0;
+  padding-top: 0;
+}
+
+.entry-section-social-share {
+  margin-top: 50px;
+  padding: 10px 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+/* Entry author
+========================================= */
+
+.entry-author-title {
+  font-size: 16px;
+}
+
+/* Comments
+========================================= */
+
+.comment-reply-title,
+.comments-title {
+  text-transform: uppercase;
+}
+
+.comment-reply-title::after,
+.comments-title::after {
+  content: "";
+  display: block;
+  width: 15px;
+  margin: 10px 0;
+  height: 1px;
+  background-color: currentColor;
+}
+
+/* -----------------------------------------
+  WordPress Blocks general styles
+----------------------------------------- */
+
+/* -----------------------------------------
+  Gutenbee Plugin Blocks
+----------------------------------------- */
+
+/* Paragraph Block
+=================================== */
+
+.has-drop-cap:not(:focus)::first-letter {
+  padding: .1rem .35rem 0 0;
+  font-size: 3.2rem;
+  line-height: .9;
+}
+
+/* File Block
+=================================== */
+
+.wp-block-file__content-wrapper .wp-block-file__button {
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* Pullquote block
+=================================== */
+
+.wp-block-pullquote.is-style-solid-color {
+  font-size: 1rem;
+  line-height: 1.33;
+  position: relative;
+  padding: 30px 30px 30px 80px;
+  border: 0;
+}
+
+.wp-block-pullquote.is-style-solid-color::before {
+  content: "\00201C";
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 30px;
+  top: 64px;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+  margin: 0;
+  max-width: 100%;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote p {
+  font-size: 1rem;
+  line-height: 1.56;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote cite {
+  font-size: .875rem;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+/* Quote block
+=================================== */
+
+.wp-block-quote {
+  font-size: 1rem;
+  line-height: 1.33;
+  position: relative;
+  padding: 0 0 0 50px;
+  border: 0;
+}
+
+.wp-block-quote::before {
+  content: "\00201C";
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: 33px;
+}
+
+.wp-block-quote p {
+  font-size: 1rem;
+  line-height: 1.56;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.wp-block-quote cite {
+  font-size: .875rem;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-quote.is-style-large {
+  padding: 0 0 0 50px;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 24px;
+}
+
+.wp-block-quote.has-text-align-center {
+  padding: 0;
+}
+
+.wp-block-quote.has-text-align-center::before {
+  display: block;
+  position: static;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.wp-block-quote.has-text-align-right {
+  padding: 0 50px 0 0;
+}
+
+.wp-block-quote.has-text-align-right::before {
+  left: auto;
+  right: 0;
+  top: -5px;
+  transform: rotate(180deg);
+}
+
+/* Block Style - Theme Title
+=================================== */
+
+.is-style-ignition-loge-title::after {
+  content: "";
+  display: block;
+  width: 15px;
+  margin: 10px 0;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.is-style-ignition-loge-title.has-text-align-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.is-style-ignition-loge-title.has-text-align-right::after {
+  margin-left: auto;
+}
+
+/* Block Style - Container Background
+=================================== */
+
+.is-style-ignition-loge-container-background-limit-right .wp-block-gutenbee-container-background,
+.is-style-ignition-loge-container-background-limit-left .wp-block-gutenbee-container-background {
+  width: calc(50% + 240px);
+}
+
+.is-style-ignition-loge-container-background-limit-right .wp-block-gutenbee-container-background {
+  right: 0;
+  left: auto;
+}
+
+.is-style-ignition-loge-container-background-limit-left .wp-block-gutenbee-container-background {
+  left: 0;
+  right: auto;
+}
+
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* General
+=================================== */
+
+.widget-title::after {
+  content: "";
+  display: block;
+  width: 15px;
+  margin: 10px 0;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.rssSummary {
+  text-transform: none;
+  font-size: 14px;
+}
+
+/* Tag Cloud Widget
+=================================== */
+
+.tag-cloud-link {
+  border-radius: 20px;
+  padding: 4px 16px;
+}
+
+/* Item Widget
+=================================== */
+
+.ignition-widget-item .ignition-widget-item-title {
+  font-size: 14px;
+  text-transform: none;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+.ignition-widget-item .ignition-widget-item-title a {
+  color: currentColor;
+}
+
+.ignition-widget-item .ignition-widget-item-subtitle {
+  font-size: 13px;
+}
+
+/* Buttons Widget
+=================================== */
+
+.ignition-item-btn.btn {
+  padding-left: 0;
+}
+
+.ignition-item-btn-title {
+  font-size: 15px;
+}
+
+.ignition-item-btn-subtitle {
+  font-size: 13px;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+/* -----------------------------------------
+ Pagination
+----------------------------------------- */
+
+.navigation {
+  margin: 70px 0 0;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.navigation li {
+  display: inline-block;
+  list-style: none;
+}
+
+.navigation a,
+.navigation .page-numbers {
+  display: inline-block;
+  padding: 0 12px 5px 0;
+  font-size: 16px !important;
+  margin: 0 5px 3px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--ignition-text-color);
+  background: none;
+}
+
+.navigation a:hover,
+.navigation .current {
+  border-color: var(--ignition-text-color);
+}
+
+.navigation .page-numbers.current,
+.navigation a:hover {
+  border-color: currentColor;
+  background-color: transparent;
+  color: currentColor;
+}
+
+.comment-navigation {
+  margin: 30px 0;
+}
+
+/* -----------------------------------------
+ Footer
+----------------------------------------- */
+
+.footer-widgets {
+  padding: 70px 0 45px;
+  border-top: 1px solid;
+}
+
+.footer-info {
+  border-top: 1px solid;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* -----------------------------------------
+	Theme editor palette colors
+----------------------------------------- */
+
+:root .has-theme-primary-color {
+  color: #d3b24d;
+}
+
+:root .has-theme-primary-background-color {
+  background-color: #d3b24d;
+}
+
+:root .has-theme-grey-dark-color {
+  color: #656565;
+}
+
+:root .has-theme-grey-dark-background-color {
+  background-color: #656565;
+}
+
+:root .has-theme-grey-color {
+  color: #8c8c8c;
+}
+
+:root .has-theme-grey-background-color {
+  background-color: #8c8c8c;
+}
+
+:root .has-theme-grey-light-color {
+  color: #e3e3e3;
+}
+
+:root .has-theme-grey-light-background-color {
+  background-color: #e3e3e3;
+}
+
+:root .has-theme-grey-lighter-color {
+  color: #f9f9f9;
+}
+
+:root .has-theme-grey-lighter-background-color {
+  background-color: #f9f9f9;
+}
+
+:root .has-theme-white-color {
+  color: #ffffff;
+}
+
+:root .has-theme-white-background-color {
+  background-color: #ffffff;
+}
+
+:root .has-theme-black-color {
+  color: #000000;
+}
+
+:root .has-theme-black-background-color {
+  background-color: #000000;
+}
+
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a {
+  color: currentColor;
+}
+
+.navigation-main > li:hover > a::before,
+.navigation-main > li > a:focus::before,
+.navigation-main > .current-menu-item > a::before,
+.navigation-main > .current-menu-parent > a::before,
+.navigation-main > .current-menu-ancestor > a::before,
+.navigation-main > .current_page_item > a::before,
+.navigation-main > .current_page_ancestor > a::before {
+  border-bottom-color: var(--ignition-primary-color);
+}
+
+.wp-block-testimonial-content-wrapper::before,
+.wp-block-quote::before,
+.ignition-widget-item-title a:hover,
+.footer .ignition-widget-item-title a:hover {
+  color: var(--ignition-primary-color);
+}
+
+.ci-item-filter.filter-active {
+  background-color: var(--ignition-primary-color);
+}
+
+.ci-item-filter.filter-active {
+  border-color: var(--ignition-primary-color);
+}
+
+/* Global - Border Color
+========================================= */
+
+.entry-section-social-share {
+  border-color: var(--ignition-border-color);
+}
+
+/* Global - Text Color
+========================================= */
+
+.entry-meta a {
+  color: var(--ignition-text-color);
+}
+
+/* Global - Secondary Text Color
+========================================= */
+
+.entry-meta,
+.entry-item-excerpt,
+blockquote cite,
+.ignition-widget-item-subtitle,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date,
+.wp-block-quote cite {
+  color: var(--ignition-secondary-text-color);
+}
+
+/* Buttons
+========================================= */
+
+.wp-block-button.is-style-outline .wp-block-button__link:not([class*=has-]) {
+  color: var(--ignition-buttons-text-color);
+}
+
+/* Footer - Text Color
+========================================= */
+
+.footer .ignition-widget-item-title a,
+.footer .ignition-widget-item-subtitle {
+  color: var(--ignition-footer-text-color);
+}
+
+/* Footer - Border Color
+========================================= */
+
+.footer-widgets {
+  border-color: var(--ignition-footer-border-color);
+}
+
+@media (max-width: 991px) {
+  :root {
+    --ignition-loge-section-padding: 70px;
+  }
+
+  .main {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --ignition-loge-section-padding: 50px;
+  }
+
+  .background-provider {
+    width: 100%;
+  }
+
+  .entry-featured {
+    margin-bottom: 70px;
+  }
+
+  .is-style-ignition-loge-container-background-limit-right .wp-block-gutenbee-container-background,
+  .is-style-ignition-loge-container-background-limit-left .wp-block-gutenbee-container-background {
+    width: calc(50% + 180px);
+  }
+}
+
+@media (max-width: 575px) {
+  .is-style-ignition-loge-container-background-limit-right .wp-block-gutenbee-container-background,
+  .is-style-ignition-loge-container-background-limit-left .wp-block-gutenbee-container-background {
+    width: 100%;
+  }
+}

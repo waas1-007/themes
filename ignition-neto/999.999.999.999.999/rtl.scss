@@ -1,0 +1,52 @@
+
+@import 'inc/assets/css/inc/mixins/breakpoints';
+
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+.entry-item-content,
+.entry-item-media {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Specific
+--------------------------------------------------------------*/
+.header-mini-cart-trigger-text {
+	.woocommerce-Price-amount {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+}
+
+.shop-filter-toggle {
+	.ignition-icons {
+		margin-left: 5px;
+		margin-right: 0;
+	}
+}
+
+li.product,
+.entry-item-product {
+	text-align: right;
+
+	.entry-item-content {
+		text-align: right;
+
+		.added_to_cart {
+			margin-left: 0;
+			margin-right: 10px;
+		}
+
+		@include media-breakpoint-down(xs) {
+			.added_to_cart {
+				margin-right: 15px;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+li.wc-block-grid__product {
+	text-align: right;
+}

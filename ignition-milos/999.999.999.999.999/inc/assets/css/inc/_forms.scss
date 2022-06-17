@@ -1,0 +1,31 @@
+/* -----------------------------------------
+ Forms
+----------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="time"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+	border-radius: 1px;
+	font-size: 14px;
+}
+
+label,
+.label {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: var(--ignition-milos-letter-spacing-base);
+}
+
+.wpcf7-form-control {
+	margin-bottom: 25px;
+}

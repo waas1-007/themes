@@ -1,0 +1,25 @@
+/* -----------------------------------------
+ Content
+----------------------------------------- */
+
+/* Author box
+========================================= */
+
+.entry-author-thumbnail {
+	width: 78px;
+	flex: none;
+	margin-right: 30px;
+
+	@include media-breakpoint-down(md) {
+		margin-right: 15px;
+	}
+}
+
+.entry-author-title {
+	font-size: 16px;
+}
+
+.entry-author-desc {
+	font-size: inherit;
+	line-height: inherit;
+}

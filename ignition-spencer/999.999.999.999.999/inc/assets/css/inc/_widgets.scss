@@ -1,0 +1,62 @@
+.widget-title {
+	font-weight: var(--ignition-font-weight-normal);
+}
+
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_nav_menu,
+.widget_product_categories,
+.widget_rating_filter,
+.woocommerce-widget-layered-nav {
+	li {
+		text-transform: uppercase;
+		line-height: 1.71429;
+
+		a {
+			display: inline-block;
+			margin-bottom: 5px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.widget_recent_comments li,
+.widget_rss li,
+.widget_recent_entries li {
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.widget {
+	.post-date,
+	.rss-date {
+		.footer & {
+			color: currentColor;
+		}
+	}
+}
+
+/* WIDGET: Search
+========================================= */
+.searchform {
+	.searchsubmit {
+		padding: 13px 20px;
+		font-size: 14px;
+	}
+}
+
+/* WIDGET: Theme - Item widget
+========================================= */
+.ignition-widget-item-title {
+	a {
+		.footer & {
+			color: currentColor;
+		}
+	}
+}

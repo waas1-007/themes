@@ -1,0 +1,14 @@
+/* -----------------------------------------
+	Base CSS Custom Properties (Variables)
+----------------------------------------- */
+
+:root {
+	// Ignition overrides
+	--ignition-colors-grey: #f5f5f5;
+
+	// Theme specific variables
+	--ignition-theme-border-radius-base: 3px;
+	--ignition-theme-letter-spacing-base: -0.01em;
+	--ignition-theme-font-weight-weight-black: 900;
+	--ignition-theme-box-shadow-base: 0 3px 0 rgba(0, 0, 0, .05);
+}

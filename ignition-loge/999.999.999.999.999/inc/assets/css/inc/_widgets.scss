@@ -1,0 +1,56 @@
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* General
+=================================== */
+.widget-title {
+	@include theme-title;
+}
+
+.rssSummary {
+	text-transform: none;
+	font-size: 14px;
+}
+
+/* Tag Cloud Widget
+=================================== */
+.tag-cloud-link {
+	border-radius: 20px;
+	padding: 4px 16px;
+}
+
+/* Item Widget
+=================================== */
+.ignition-widget-item {
+	.ignition-widget-item-title {
+		font-size: 14px;
+		text-transform: none;
+		font-weight: var(--ignition-font-weight-bold);
+
+		a {
+			color: currentColor;
+		}
+	}
+
+	.ignition-widget-item-subtitle {
+		font-size: 13px;
+	}
+}
+
+/* Buttons Widget
+=================================== */
+.ignition-item-btn {
+	&.btn {
+		padding-left: 0;
+	}
+}
+
+.ignition-item-btn-title {
+	font-size: 15px;
+}
+
+.ignition-item-btn-subtitle {
+	font-size: 13px;
+	font-weight: var(--ignition-font-weight-normal);
+}

@@ -1,0 +1,396 @@
+/* -----------------------------------------
+  WordPress Blocks general styles
+----------------------------------------- */
+
+/* Latest Posts block
+=================================== */
+.wp-block-latest-posts {
+	.wp-block-latest-posts__featured-image {
+		img {
+			@include border-image;
+		}
+	}
+}
+
+/* Image block
+=================================== */
+.wp-block-image {
+	img {
+		border-radius: var(--ignition-milos-border-radius-base);
+	}
+
+	&.is-style-ignition-milos-border-image {
+		img {
+			@include border-image;
+		}
+	}
+}
+
+[class*="wp-image"] {
+	border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Gallery block
+=================================== */
+.wp-block-gallery {
+	&.is-style-ignition-milos-border-image {
+		img {
+			@include border-image;
+		}
+
+		.blocks-gallery-item__caption {
+			bottom: 10px;
+			left: 10px;
+			width: calc(100% - 20px);
+		}
+	}
+}
+
+/* Media & Text block
+=================================== */
+.wp-block-media-text {
+	&.is-style-ignition-milos-border-image {
+		.wp-block-media-text__media {
+			@include border-image;
+		}
+
+		&.is-image-fill {
+			.wp-block-media-text__media {
+				position: relative;
+				box-shadow: none;
+				padding: 0;
+				background-color: transparent;
+
+				&::before {
+					@include border-image;
+					background: none;
+					border: 10px solid var(--ignition-colors-white);
+					content: "";
+					pointer-events: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* Cover block
+=================================== */
+.wp-block-cover {
+	&.is-style-ignition-milos-border-image {
+		&::after {
+			@include border-image;
+			background: none;
+			border: 10px solid var(--ignition-colors-white);
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+	}
+}
+
+/* Video block
+=================================== */
+.wp-block-video {
+	&.is-style-ignition-milos-border-image {
+		video {
+			@include border-image;
+		}
+	}
+}
+
+/* Embeds block (Needs custom class)
+=================================== */
+.wp-block-embed {
+	&.is-style-ignition-milos-border-image {
+		iframe {
+			@include border-image;
+		}
+	}
+}
+
+
+/* Pullquote block
+=================================== */
+.wp-block-pullquote {
+	&.is-style-solid-color {
+		font-size: 1rem;
+		line-height: 1.33;
+		position: relative;
+		padding: 30px 30px 30px 80px;
+		border: 0;
+		border-radius: var(--ignition-border-radius);
+
+		&::before {
+			content: "\00201C";
+			font-style: normal;
+			font-size: 4rem;
+			line-height: 0;
+			position: absolute;
+			left: 30px;
+			top: 57px;
+		}
+
+		blockquote {
+			margin: 0;
+			max-width: 100%;
+
+			p {
+				font-size: 1rem;
+				line-height: 1.56;
+				font-weight: var(--ignition-font-weight-normal);
+			}
+
+			cite {
+				font-size: .875rem;
+				font-weight: var(--ignition-font-weight-bold);
+			}
+		}
+	}
+}
+
+/* Quote block
+=================================== */
+.wp-block-quote {
+	font-size: 1rem;
+	line-height: 1.33;
+	position: relative;
+	padding: 30px 30px 30px 80px;
+	border: 0;
+	background-color: var(--ignition-colors-grey);
+	border-color: var(--ignition-milos-border-radius-base);
+
+	&::before {
+		content: "\00201C";
+		font-style: normal;
+		font-size: 4rem;
+		line-height: 0;
+		position: absolute;
+		left: 30px;
+		top: 57px;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.56;
+		font-weight: var(--ignition-font-weight-normal);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	cite {
+		font-size: .875rem;
+		font-weight: var(--ignition-font-weight-bold);
+	}
+
+	&.is-style-large {
+		padding: 30px 30px 30px 80px;
+
+		p {
+			font-size: 20px;
+		}
+	}
+
+	&.has-text-align-center {
+		padding: 30px;
+
+		&::before {
+			display: block;
+			position: static;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&.has-text-align-right {
+		padding: 30px 80px 30px 30px;
+
+		&::before {
+			left: auto;
+			right: 30px;
+			top: 30px;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+/* Table block
+=================================== */
+.wp-block-table {
+	&.is-style-ignition-milos-table {
+		border: 0;
+
+		thead {
+			color: var(--ignition-colors-white);
+
+			th {
+				&:first-child {
+					border-top-left-radius: var(--ignition-milos-border-radius-base);
+				}
+
+				&:last-child {
+					border-top-right-radius: var(--ignition-milos-border-radius-base);
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				&:nth-child(odd) {
+					background: none;
+				}
+
+				&:nth-child(even) {
+					background-color: lighten(#f1f1f1, 2.2%);
+				}
+			}
+		}
+
+		.has-background {
+			thead {
+				background: rgba(#000, 0.05);
+			}
+
+			tfoot {
+				background: none;
+			}
+
+			tbody {
+				tr {
+					&:nth-child(even) {
+						background-color: rgba(#000, 0.03);
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		thead {
+			display: none;
+		}
+
+		tbody {
+			tr {
+				padding: 10px 15px;
+				display: block;
+				margin-top: -1px;
+			}
+
+			td {
+				display: block;
+				padding: 0;
+				font-size: 15px;
+
+				&:first-child {
+					font-size: 16px;
+					font-weight: var(--ignition-font-weight-bold);
+					padding: 0 0 5px;
+				}
+			}
+
+			.td-label {
+				display: inline-block;
+				margin-right: 3px;
+				font-weight: var(--ignition-font-weight-bold);
+				opacity: .8;
+			}
+		}
+	}
+}
+
+/* -----------------------------------------
+  Gutenbee Plugin Blocks
+----------------------------------------- */
+
+/* Paragraph Block
+=================================== */
+.has-drop-cap:not(:focus) {
+	&::first-letter {
+		padding: 0 .55rem 0 0;
+		font-size: 4rem;
+		line-height: .9;
+		font-weight: var(--ignition-font-weight-bold);
+	}
+}
+
+.is-style-ignition-milos-letter-stylized {
+	position: relative;
+}
+
+/* Image block
+=================================== */
+.wp-block-gutenbee-image {
+	&.is-style-ignition-milos-border-image {
+		img {
+			@include border-image;
+		}
+	}
+}
+
+/* Image Box block
+=================================== */
+.wp-block-gutenbee-imagebox {
+	&.is-style-ignition-milos-border-image {
+		img {
+			@include border-image;
+		}
+	}
+}
+
+/* Gallery block
+=================================== */
+.wp-block-gutenbee-justified-gallery {
+	&.is-style-ignition-milos-border-image {
+		@include border-image;
+	}
+}
+
+/* Video block
+=================================== */
+.wp-block-gutenbee-video {
+	&.is-style-ignition-milos-border-image {
+		video {
+			@include border-image;
+		}
+	}
+}
+
+/* Slideshow block
+=================================== */
+.wp-block-gutenbee-slideshow {
+	&.is-style-ignition-milos-border-image {
+		@include border-image;
+
+		button.slick-prev {
+			left: 10px;
+		}
+
+		button.slick-next {
+			right: 10px;
+		}
+
+		.slick-dots {
+			bottom: 15px;
+		}
+	}
+}
+
+/* Maps block
+=================================== */
+.wp-block-gutenbee-google-maps {
+	&.is-style-ignition-milos-border-image {
+		@include border-image;
+	}
+}

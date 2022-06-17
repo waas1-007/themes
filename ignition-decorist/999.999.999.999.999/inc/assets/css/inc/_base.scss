@@ -1,0 +1,27 @@
+/* -----------------------------------------
+ Base theme styles
+----------------------------------------- */
+
+/* Main
+========================================= */
+.main {
+	padding: 60px 0;
+}
+
+/* Buttons
+========================================= */
+.btn,
+.button,
+.gutenbee-block-button-link,
+.wp-block-button__link,
+.ci-item-filter,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"],
+.ignition-slideshow .maxslider-btn {
+	padding: 10px 26px;
+}
+
+.comment-reply-link {
+	font-size: 12px;
+}

@@ -1,0 +1,40 @@
+/*
+Theme Name: Shopmenia
+Theme URI: https://shahbandr.com/
+Description: Shopmenia Shahbandr Theme.
+Author: Shahbandr
+Author URI: https://shahbandr.com/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */
+#wp-admin-bar-wu-my-account {
+    display:none;
+}
+#wp-admin-bar-my-sites {
+    display:none;
+}
+#wp-admin-bar-comments {
+    display:none;
+}
+#wp-admin-bar-new-post {
+    display:none;
+}
+#wp-admin-bar-new-media {
+    display:none;
+}
+#site-header.medium-header #medium-searchform label {
+    right: 30px;
+    color: #333;
+    cursor: text;
+    -moz-opacity: .5;
+    -webkit-opacity: .5;
+    opacity: .5;
+    z-index: 1;
+}
+.wp-block-columns {
+    display: flex;
+    margin-bottom: 1.75em;
+    box-sizing: border-box;
+}

@@ -1,0 +1,164 @@
+/* -----------------------------------------
+	MaxSlider Styling
+----------------------------------------- */
+
+.maxslider .slick-arrow {
+  width: 58px;
+  height: 58px;
+  margin-top: -36px;
+}
+
+.maxslider .slick-arrow svg {
+  width: 80%;
+  height: 80%;
+}
+
+.maxslider .slick-arrow-prev {
+  left: 30px;
+}
+
+.maxslider .slick-arrow-next {
+  right: 30px;
+}
+
+.maxslider .maxslider-slide-title {
+  margin: 0 0 8px;
+  letter-spacing: .075em;
+}
+
+.maxslider .maxslider-slide-subtitle {
+  margin: 0 0 13px;
+  order: -1;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+}
+
+.maxslider .maxslider-slide-content-pad {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.maxslider .maxslider-align-center .maxslider-slide-content-pad {
+  align-items: center;
+}
+
+.maxslider .maxslider-align-right .maxslider-slide-content-pad {
+  align-items: flex-end;
+}
+
+.maxslider .slick-dots {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 75px;
+  bottom: auto;
+}
+
+.maxslider .slick-dots li {
+  display: block;
+  margin: 16px 0;
+  line-height: 0;
+}
+
+.maxslider .slick-dots button {
+  position: relative;
+  text-indent: -999em;
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  opacity: .5;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: 0;
+}
+
+.maxslider .slick-dots .slick-active button {
+  opacity: 1;
+}
+
+/* Full / wide alignment support
+ * When under alignfull/wide, adapt to the theme's grid.
+======================================================== */
+
+.alignwide .maxslider-slide-content-pad,
+.alignfull .maxslider-slide-content-pad {
+  width: 70%;
+}
+
+/* Colors
+======================================================== */
+
+.maxslider .maxslider-slide-content .maxslider-btn {
+  border: 0;
+  border-bottom: 3px solid currentColor;
+  color: var(--ignition-colors-white);
+  background: none;
+  font-size: 13px;
+  padding: 10px 28px 16px 0;
+  min-width: 80px;
+}
+
+.maxslider .maxslider-slide-content .maxslider-btn:focus,
+.maxslider .maxslider-slide-content .maxslider-btn:hover {
+  color: var(--ignition-colors-white);
+  border-color: currentColor;
+}
+
+@media (max-width: 1229px) {
+  .maxslider .slick-dots {
+    top: auto;
+    transform: none;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .alignwide .maxslider-slide-content-pad,
+  .alignfull .maxslider-slide-content-pad {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .maxslider .slick-arrow {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+  }
+
+  .maxslider .maxslider-slide-title {
+    font-size: 32px;
+  }
+
+  .maxslider .maxslider-slide-content .maxslider-slide-content-pad .maxslider-slide-title {
+    font-size: 32px;
+  }
+
+  .maxslider .slick-dots li {
+    margin: 10px 0;
+  }
+
+  .alignfull .maxslider {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 575px) {
+  .alignwide .maxslider-slide-content,
+  .alignfull .maxslider-slide-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

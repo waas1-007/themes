@@ -1,0 +1,55 @@
+*** Pharmacy Changelog ***
+
+2019.05.08 - version 2.0.14
+ * Fix - Correctly return default setting values in `storefront_setting_default_values()`.
+
+2018.12.06 - version 2.0.13
+ * Fix - Set header search input text color the same as body.
+ * Fix - Add margin between post taxonomy section and post navigation links.
+
+2018.04.30 - version 2.0.12
+ * Tweak - Storefront 2.3.0 compatibility.
+ * Fix - Consistent site title styling across all pages.
+ * Fix - Single product page "On Sale" badge z-index.
+
+2018.02.15 - version 2.0.11
+ * Tweak - Compatibility with WooCommerce 3.3.
+
+2017.09.05 - version 2.0.10
+ * Fix - Remove invalid color option from default colors.
+
+2017.08.14 - version 2.0.9
+ * Fix - Missing styling for h2 elements in Mega Menus.
+
+2017.07.03 - version 2.0.8
+ * Fix - Invalid default body color.
+
+2017.06.06 - version 2.0.7
+ * Tweak - Remove homepage top padding.
+
+2017.02.16 - version 2.0.6
+ * Tweak - Storefront 2.2.0 compatibility.
+
+2016.10.12 - version 2.0.5
+ * Fix - Mega menu display.
+
+2016.08.15 - version 2.0.4
+ * Tweak - Storefront 2.1 compatibility.
+ * Fix - Breadcrumb icon.
+
+2016.05.11 - version 2.0.3
+ * Tweak - Adopt Storefront 2.0 methods for applying default settings.
+ * Fix - Support for WordPress 4.5 custom logo feature.
+
+2016.04.15 - version 2.0.2
+ * Fix - Correct placement of the homepage contact section when using https://wordpress.org/plugins/storefront-homepage-contact-section/
+
+2016.03.22 - version 2.0.1
+ * Tweak - Storefront 2.0.0 compatibility.
+
+2016.02.22 - version 2.0.0
+ * New - Full RTL support.
+ * Dev - Switch to class based structure.
+
+2016.01.28 - version 1.0.0
+ * Initial release.

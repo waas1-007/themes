@@ -1,0 +1,40 @@
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+
+.entry-title {
+	a {
+		color: currentColor;
+	}
+}
+
+.btn-entry-more,
+.entry-more-btn {
+	padding: 8px 15px;
+}
+
+.entry-item-title {
+	font-size: 16px;
+
+	a {
+		color: currentColor;
+	}
+
+	+ .entry-meta {
+		margin-bottom: 15px;
+	}
+}
+
+.entry-item {
+	.entry-meta {
+		font-size: 13px;
+	}
+}
+
+.entry-item-content {
+	text-align: left;
+}
+
+.entry-item-thumb {
+	margin-bottom: 15px;
+}

@@ -1,0 +1,35 @@
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* Tags
+=================================== */
+.tag-cloud-link {
+	border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Ignition Items
+=================================== */
+.ignition-widget-item-title {
+	a {
+		color: currentColor;
+	}
+}
+
+.ignition-widget-item-subtitle {
+	font-size: 14px;
+}
+
+/* Ignition Buttons
+=================================== */
+.ignition-item-btn {
+	&.btn {
+		padding-left: 25px;
+		padding-right: 25px;
+		border-radius: 40px;
+	}
+}
+
+.ignition-item-btn-title {
+	font-size: 15px;
+}

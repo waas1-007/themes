@@ -1,0 +1,135 @@
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a,
+.entry-meta a,
+.entry-item-list-meta a,
+.ignition-widget-item .ignition-widget-item-title a:hover {
+	color: var(--ignition-primary-color);
+}
+
+.navigation .page-numbers:hover,
+.navigation .page-numbers.current,
+.wc-block-pagination .wc-block-pagination-page.wc-block-pagination-page--active,
+.wc-block-pagination .wc-block-pagination-page:hover,
+.woocommerce-pagination .page-numbers.current,
+.woocommerce-pagination a.page-numbers:hover {
+	background-color: var(--ignition-primary-color);
+}
+
+.navigation .page-numbers:hover,
+.navigation .page-numbers.current,
+.wc-block-pagination .wc-block-pagination-page.wc-block-pagination-page--active,
+.wc-block-pagination .wc-block-pagination-page:hover,
+.woocommerce-pagination .page-numbers.current,
+.woocommerce-pagination a.page-numbers:hover,
+.navigation-main .nav-button > a,
+.navigation-main .nav-button > a:hover {
+	border-color: var(--ignition-primary-color);
+}
+
+/* Global - Text Color
+========================================= */
+.entry-meta a:hover,
+.entry-item-list-meta a:hover {
+	color: var(--ignition-text-color);
+}
+
+/* Global - Secondary Text Color
+========================================= */
+.entry-meta,
+.entry-item-excerpt,
+blockquote cite,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date,
+.wp-block-quote cite {
+	color: var(--ignition-secondary-text-color);
+}
+
+/* Header - Border Color
+========================================= */
+.header-normal {
+	.head-mast-inner {
+		&::after {
+			border-bottom: 1px solid var(--ignition-header-border-color);
+		}
+	}
+}
+
+.header-mini-cart-count {
+	.head-intro & {
+		color: var(--ignition-colors-white);
+		background-color: var(--ignition-top-bar-text-color);
+	}
+}
+
+/* Buttons / Pagination
+========================================= */
+.navigation-main .nav-button a:hover,
+.btn:hover,
+.button:hover,
+.comment-reply-link:hover,
+.wp-block-button__link:hover,
+.ci-item-filter:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button[type="submit"]:hover,
+.gutenbee-block-button-link:hover,
+.added_to_cart:hover,
+li.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link:hover {
+	background-color: var(--ignition-primary-color);
+	border-color: var(--ignition-primary-color);
+}
+
+.navigation .page-numbers,
+.wc-block-pagination .wc-block-pagination-page,
+.woocommerce-pagination a.page-numbers {
+	background-color: transparent;
+	color: var(--ignition-text-color);
+	border-color: var(--ignition-primary-color);
+
+	&:hover {
+		color: var(--ignition-colors-white);
+	}
+}
+
+.wp-block-file__content-wrapper {
+	.wp-block-file__button {
+		background-color: var(--ignition-buttons-background-color);
+		color: var(--ignition-buttons-text-color);
+		border-color: var(--ignition-buttons-border-color);
+	}
+}
+
+.ci-item-filter.filter-active,
+.wp-block-button.is-style-outline .wp-block-button__link:not([class*="has-"]) {
+	color: var(--ignition-buttons-text-color);
+}
+
+/* Footer - Border Color
+========================================= */
+.footer {
+	border-color: var(--ignition-footer-border-color);
+}

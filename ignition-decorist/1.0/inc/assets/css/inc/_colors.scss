@@ -1,0 +1,331 @@
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Body Background Color
+========================================= */
+.category-search-results {
+	background-color: var(--ignition-body-background-color);
+}
+
+/* Global - Primary Color
+========================================= */
+.navigation a.current,
+.woocommerce-pagination a.current,
+.navigation .page-numbers.current,
+.woocommerce-pagination .page-numbers.current,
+.section-pre-main .ignition-breadcrumbs a:hover,
+.ignition-widget-item .ignition-widget-item-title a:hover {
+	color: var(--ignition-primary-color);
+}
+
+.widget_meta li,
+.widget_pages li,
+.widget_categories li,
+.widget_archive li,
+.widget_nav_menu li,
+.widget_product_categories li,
+.widget_layered_nav li,
+.widget_rating_filter li,
+.widget_ignition-page-children-menu li,
+.wp-block-woocommerce-product-categories li {
+	a:hover {
+		color: var(--ignition-primary-color);
+	}
+
+	&:hover {
+		> .count,
+		> .ci-count {
+			background-color: var(--ignition-primary-color);
+			color: var(--ignition-colors-white);
+		}
+	}
+}
+
+.widget:hover .widget-title,
+.is-style-ignition-decorist-post-types-slideshow .slick-arrow:hover {
+	border-color: var(--ignition-primary-color);
+}
+
+.is-style-ignition-decorist-post-types-slideshow .slick-arrow:hover {
+	background-color: var(--ignition-primary-color);
+}
+
+.category-search-spinner {
+	border-color: rgba(#000, .2);
+	border-top-color: var(--ignition-forms-text-color);
+}
+
+/* Global - Text Color
+========================================= */
+.entry-meta a,
+.is-style-ignition-decorist-post-types-slideshow .slick-arrow,
+.category-search-select,
+.category-search-results-item a,
+.section-pre-main a,
+.widget_meta li a,
+.widget_pages li a,
+.widget_categories li a,
+.widget_archive li a,
+.widget_nav_menu li a,
+.widget_product_categories li a,
+.widget_layered_nav li a,
+.widget_rating_filter li a,
+.wp-block-woocommerce-product-categories li a {
+	color: var(--ignition-text-color);
+}
+
+/* Global - Secondary Text Color
+========================================= */
+.entry-meta,
+.entry-item-excerpt,
+blockquote cite,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date,
+.wp-block-quote cite,
+.section-pre-main .ignition-breadcrumbs {
+	color: var(--ignition-secondary-text-color);
+}
+
+/* Global - Border Color
+========================================= */
+.entry-item,
+.is-style-ignition-decorist-post-types-slideshow .slick-arrow,
+.widget_meta li a,
+.widget_pages li a,
+.widget_categories li a,
+.widget_archive li a,
+.widget_nav_menu li a,
+.widget_product_categories li a,
+.widget_layered_nav li a,
+.widget_rating_filter li a,
+.widget_ignition-page-children-menu li a,
+.wp-block-woocommerce-product-categories li a,
+.widget-title {
+	border-color: var(--ignition-border-color);
+}
+
+/* Top Bar / Default Colors
+========================================= */
+.header-normal .head-intro {
+	border-bottom-color: var(--ignition-top-bar-border-color);
+}
+
+/* Top Bar / Transparent Colors
+========================================= */
+.header-fixed .head-intro {
+	border-bottom-color: var(--ignition-top-bar-transparent-border-color);
+}
+
+/* Header / Default Colors
+========================================= */
+.header-normal {
+	.head-mast-navigation {
+		color: var(--ignition-header-text-color);
+		border-bottom: 1px solid var(--ignition-header-border-color);
+
+		.navigation-main ul {
+			background-color: var(--ignition-header-submenu-background-color);
+			color: var(--ignition-header-submenu-text-color);
+		}
+
+		.navigation-main > li > ul::before {
+			border-bottom-color: var(--ignition-header-submenu-background-color);
+		}
+
+		.navigation-main li {
+			li:hover > a,
+			li > a:focus,
+			.current-menu-item > a,
+			.current-menu-parent > a,
+			.current-menu-ancestor > a,
+			.current_page_item > a,
+			.current_page_ancestor > a {
+				color: var(--ignition-header-submenu-text-color-hover, var(--ignition-primary-color));
+				background-color: var(--ignition-header-submenu-background-color-hover);
+			}
+		}
+	}
+
+	.mobile-nav-trigger,
+	.head-mast-inner .head-content-slot-item,
+	.category-search-input,
+	.category-search-input:hover,
+	.category-search-input:focus,
+	.category-search-select,
+	.category-search-select:hover,
+	.category-search-select:focus {
+		border-color: var(--ignition-header-border-color);
+	}
+}
+
+/* Header / Transparent Colors
+========================================= */
+.header-fixed {
+	.head-mast-navigation {
+		color: var(--ignition-header-transparent-text-color);
+		border-bottom: 1px solid var(--ignition-header-transparent-border-color);
+
+		.navigation-main ul {
+			background-color: var(--ignition-header-transparent-submenu-bg-color);
+			color: var(--ignition-header-transparent-submenu-text-color);
+		}
+
+		.navigation-main li {
+			li:hover > a,
+			li > a:focus,
+			.current-menu-item > a,
+			.current-menu-parent > a,
+			.current-menu-ancestor > a,
+			.current_page_item > a,
+			.current_page_ancestor > a {
+				color: var(--ignition-header-transparent-submenu-text-color-hover, var(--ignition-primary-color));
+				background-color: var(--ignition-header-transparent-submenu-bg-color-hover);
+			}
+		}
+	}
+
+	.mobile-nav-trigger,
+	.head-mast-inner .head-content-slot-item,
+	.category-search-input,
+	.category-search-input:hover,
+	.category-search-input:focus,
+	.category-search-select,
+	.category-search-select:hover,
+	.category-search-select:focus {
+		border-color: var(--ignition-header-transparent-border-color);
+	}
+}
+
+/* Header / Sticky Colors
+========================================= */
+.head-mast.sticky-fixed,
+.head-mast-navigation.sticky-fixed {
+	background-color: var(--ignition-header-sticky-background-color);
+	color: var(--ignition-header-sticky-text-color);
+	border-bottom: 1px solid var(--ignition-header-sticky-border-color);
+
+	&::before {
+		background-color: var(--ignition-header-sticky-overlay-background-color);
+	}
+}
+
+.head-mast-navigation.sticky-fixed {
+	.navigation-main ul {
+		background-color: var(--ignition-header-sticky-submenu-background-color);
+		color: var(--ignition-header-sticky-submenu-text-color);
+	}
+
+	.navigation-main > li > ul::before {
+		border-bottom-color: var(--ignition-header-sticky-submenu-background-color);
+	}
+
+	.navigation-main li {
+		li:hover > a,
+		li > a:focus,
+		.current-menu-item > a,
+		.current-menu-parent > a,
+		.current-menu-ancestor > a,
+		.current_page_item > a,
+		.current_page_ancestor > a {
+			color: var(--ignition-header-sticky-submenu-text-color-hover, var(--ignition-primary-color));
+			background-color: var(--ignition-header-sticky-submenu-background-color-hover);
+		}
+	}
+}
+
+.head-mast.sticky-fixed {
+	.category-search-select,
+	.category-search-select:hover,
+	.category-search-select:focus,
+	.category-search-input,
+	.category-search-input:hover,
+	.category-search-input:focus,
+	.mobile-nav-trigger,
+	.head-mast-inner .head-content-slot-item {
+		border-color: var(--ignition-header-sticky-border-color);
+	}
+}
+
+/* General Navigation
+========================================= */
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a,
+.navigation a:hover,
+.navigation .page-numbers.current,
+.navigation-main .menu-item-has-children > a::after,
+.navigation-main .page_item_has_children > a::after,
+.navigation-main li[class*=ignition-icons-]::before,
+.navigation-mobile li[class*=ignition-icons-]::before {
+	color: var(--ignition-primary-color);
+}
+
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a {
+	&::before {
+		border-bottom-color: var(--ignition-primary-color);
+	}
+}
+
+.header-mini-cart-trigger {
+	&:hover {
+		color: inherit;
+	}
+}
+
+/* Footer
+========================================= */
+.footer-widgets .widget_meta li a,
+.footer-widgets .widget_pages li a,
+.footer-widgets .widget_categories li a,
+.footer-widgets .widget_archive li a,
+.footer-widgets .widget_nav_menu li a,
+.footer-widgets .widget_product_categories li a,
+.footer-widgets .widget_layered_nav li a,
+.footer-widgets .widget_rating_filter li a,
+.footer-widgets .widget_ignition-page-children-menu li a,
+.footer-widgets .wp-block-woocommerce-product-categories li a {
+	color: var(--ignition-footer-text-color);
+	border-bottom-color: var(--ignition-footer-border-color);
+
+	&:hover {
+		color: var(--ignition-primary-color);
+	}
+}
+
+.footer-widgets [id*="social"].menu a {
+	color: var(--ignition-colors-white);
+
+	&:hover {
+		color: var(--ignition-colors-white);
+	}
+}
+
+.footer-widgets,
+.footer-widgets .widget-title,
+.footer-widgets .ignition-widget-item {
+	border-color: var(--ignition-footer-border-color);
+}

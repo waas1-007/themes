@@ -1,0 +1,52 @@
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+.entry-meta a,
+.ignition-widget-item-title a:hover {
+	color: var(--ignition-primary-color);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead,
+.mobile-nav-trigger,
+.navigation-main .nav-button > a {
+	background-color: var(--ignition-primary-color);
+}
+
+.navigation-main .nav-button > a {
+	border-color: var(--ignition-primary-color);
+}
+
+/* Global - Primary Text Color
+========================================= */
+
+/* Global - Secondary Text Color
+========================================= */
+.page-subtitle,
+.entry-item-excerpt,
+.ignition-widget-item-subtitle,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date {
+	color: var(--ignition-secondary-text-color);
+}
+
+/* Footer - Border Color
+========================================= */
+.footer {
+	border-top: 1px solid var(--ignition-footer-border-color);
+}

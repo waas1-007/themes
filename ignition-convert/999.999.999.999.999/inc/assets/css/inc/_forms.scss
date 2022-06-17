@@ -1,0 +1,39 @@
+/* -----------------------------------------
+ Forms
+----------------------------------------- */
+
+label,
+.label {
+	letter-spacing: var(--ignition-convert-letter-spacing-base);
+	font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="time"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+	font-size: 14px;
+	border-radius: var(--ignition-convert-border-radius-base);
+}
+
+//
+// Select 2 Styles
+//
+
+.select2-container {
+	&.select2-container--default {
+		.select2-selection--multiple,
+		.select2-selection--single {
+			border-radius: var(--ignition-convert-border-radius-base);
+		}
+	}
+}

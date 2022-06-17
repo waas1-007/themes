@@ -1,0 +1,58 @@
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* General
+=================================== */
+.widget {
+	@media (max-height: 768px) {
+		margin-bottom: 40px;
+	}
+}
+
+.rssSummary {
+	text-transform: none;
+	font-size: 14px;
+}
+
+/* Tag Cloud Widget
+=================================== */
+.tag-cloud-link {
+	border-radius: 20px;
+	padding: 4px 16px;
+}
+
+/* Item Widget
+=================================== */
+.ignition-widget-item {
+	.ignition-widget-item-title {
+		font-size: 14px;
+
+		a {
+			color: currentColor;
+		}
+	}
+
+	.ignition-widget-item-subtitle {
+		font-size: 13px;
+	}
+}
+
+/* Buttons Widget
+=================================== */
+.ignition-item-btn {
+	&.btn {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+.ignition-item-btn-title {
+	font-size: 13px;
+}
+
+.ignition-item-btn-subtitle {
+	text-transform: none;
+	font-size: 13px;
+	font-weight: var(--ignition-font-weight-normal);
+}

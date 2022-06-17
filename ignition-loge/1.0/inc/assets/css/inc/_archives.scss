@@ -1,0 +1,47 @@
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+.entry-featured {
+	margin-bottom: 100px;
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 70px;
+	}
+}
+
+.entry-item-content {
+	text-align: left;
+}
+
+.entry-item-title {
+	text-transform: none;
+	font-size: 16px;
+	font-weight: var(--ignition-font-weight-bold);
+	letter-spacing: var(--ignition-loge-letter-spacing-base);
+
+	+ .entry-meta {
+		margin: -15px 0 20px;
+	}
+}
+
+.entry-meta {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: 0 0 10px;
+}
+
+.entry-title {
+	font-size: 28px;
+}
+
+.entry-section-title {
+	@include theme-title;
+}
+
+/* Item filters
+========================================= */
+.ci-item-filter {
+	&.filter-active {
+		color: var(--ignition-colors-white);
+	}
+}

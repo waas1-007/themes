@@ -1,0 +1,177 @@
+/* -----------------------------------------
+	MaxSlider Styling
+----------------------------------------- */
+
+@import "inc/mixins/breakpoints";
+
+.maxslider {
+	.slick-arrow {
+		width: 58px;
+		height: 58px;
+		margin-top: -36px;
+
+		svg {
+			width: 80%;
+			height: 80%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 48px;
+			height: 48px;
+			margin-top: -24px;
+		}
+	}
+
+	.slick-arrow-prev {
+		left: 30px;
+	}
+
+	.slick-arrow-next {
+		right: 30px;
+	}
+
+	.maxslider-slide-title {
+		margin: 0 0 8px;
+		letter-spacing: .075em;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 32px;
+	 	}
+	}
+
+	.maxslider-slide-content {
+		// Overcoming specificity
+		.maxslider-slide-content-pad {
+			.maxslider-slide-title {
+				@include media-breakpoint-down(sm) {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+
+	.maxslider-slide-subtitle {
+		margin: 0 0 13px;
+		order: -1;
+		text-transform: uppercase;
+		letter-spacing: .4em;
+	}
+
+	.maxslider-slide-content-pad {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.maxslider-align-center {
+		.maxslider-slide-content-pad {
+			align-items: center;
+		}
+	}
+
+	.maxslider-align-right {
+		.maxslider-slide-content-pad {
+			align-items: flex-end;
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+		width: auto;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 75px;
+		bottom: auto;
+
+		@include media-breakpoint-down(lg) {
+			top: auto;
+			transform: none;
+			right: 15px;
+			bottom: 15px;
+		}
+
+		li {
+			display: block;
+			margin: 16px 0;
+			line-height: 0;
+
+			@include media-breakpoint-down(sm) {
+				margin: 10px 0;
+			}
+		}
+
+		button {
+			position: relative;
+			text-indent: -999em;
+			padding: 0;
+			margin: 0;
+			width: 20px;
+			height: 2px;
+			background-color: currentColor;
+			opacity: .5;
+			min-width: 0;
+			border: 0;
+			outline: 0;
+			border-radius: 0;
+			box-shadow: none;
+			line-height: 0;
+		}
+
+		.slick-active {
+			button {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/* Full / wide alignment support
+ * When under alignfull/wide, adapt to the theme's grid.
+======================================================== */
+.alignwide,
+.alignfull {
+	.maxslider-slide-content {
+		@include media-breakpoint-down(xs) {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+
+	.maxslider-slide-content-pad {
+		width: 70%;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+	}
+}
+
+.alignfull {
+	.maxslider {
+		@include media-breakpoint-down(sm) {
+			height: 100vh;
+		}
+	}
+}
+
+/* Colors
+======================================================== */
+.maxslider .maxslider-slide-content .maxslider-btn {
+	border: 0;
+	border-bottom: 3px solid currentColor;
+	color: var(--ignition-colors-white);
+	background: none;
+	font-size: 13px;
+	padding: 10px 28px 16px 0;
+	min-width: 80px;
+
+	&:focus,
+	&:hover {
+		color: var(--ignition-colors-white);
+		border-color: currentColor;
+	}
+}

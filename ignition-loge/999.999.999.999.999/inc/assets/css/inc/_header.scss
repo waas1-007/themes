@@ -1,0 +1,95 @@
+/* -----------------------------------------
+ Header
+----------------------------------------- */
+
+/* Top bar
+========================================= */
+.head-intro-inner {
+	padding: 10px 0;
+}
+
+/* Mast head
+========================================= */
+.head-mast {
+	font-size: 16px;
+}
+
+.head-mast-inner {
+	padding: 22px 0;
+}
+
+/* Branding
+========================================= */
+.site-logo {
+	font-size: 28px;
+	letter-spacing: var(--ignition-loge-letter-spacing-base);
+	text-transform: uppercase;
+}
+
+/* Page hero
+========================================= */
+.page-hero-content {
+	.page-hero-title {
+		font-size: 28px;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.page-hero-subtitle {
+		margin: 5px 0 0;
+		line-height: 1.45;
+	}
+}
+
+
+/* Page title (in content)
+========================================= */
+.page-title-wrap {
+	margin-bottom: 50px;
+}
+
+.page-title-content {
+	.page-title {
+		@include theme-title;
+		font-size: 28px;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.page-subtitle {
+		margin: 0;
+		line-height: 1.45;
+	}
+
+	.page-title-align-center & {
+		.page-title {
+			&::after {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	.page-title-align-right & {
+		.page-title {
+			&::after {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+
+.page-title-description,
+.page-subtitle,
+.page-hero-subtitle {
+	font-size: 16px;
+}

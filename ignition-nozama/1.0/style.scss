@@ -1,0 +1,45 @@
+/*!
+Theme Name: Nozama - Ignition
+Theme URI: https://www.cssigniter.com/themes/nozama/
+Author: CSSIgniter
+Author URI: https://www.cssigniter.com/
+Description: An E-Commerce theme for WordPress
+Version: 1.2.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ignition-nozama
+RequiresIgnition: 2.1.0
+*/
+
+/* -----------------------------------------
+	Table of Contents
+--------------------------------------------
+
+.. Theme Variables
+.. General / Base
+.. Forms
+.. Main Navigation
+.. Header
+.. Archives
+.. Content
+.. Blocks
+.. Widgets
+.. Footer
+.. Editor Palette
+.. Theme Colors
+*/
+
+@import "inc/assets/css/inc/theme-variables";
+@import "inc/assets/css/inc/mixins/breakpoints";
+@import "inc/assets/css/inc/mixins/mixins";
+@import "inc/assets/css/inc/base";
+@import "inc/assets/css/inc/forms";
+@import "inc/assets/css/inc/navigation";
+@import "inc/assets/css/inc/header";
+@import "inc/assets/css/inc/archives";
+@import "inc/assets/css/inc/content";
+@import "inc/assets/css/inc/blocks";
+@import "inc/assets/css/inc/widgets";
+@import "inc/assets/css/inc/footer";
+@import "inc/assets/css/inc/editor-palette";
+@import "inc/assets/css/inc/colors";

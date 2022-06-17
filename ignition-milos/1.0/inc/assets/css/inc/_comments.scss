@@ -1,0 +1,43 @@
+/* -----------------------------------------
+ Comments
+----------------------------------------- */
+
+.comment-reply-title,
+.comments-title {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.logged-in-as,
+.comment-notes {
+	text-align: center;
+}
+
+.comment-form-cookies-consent {
+	[type="checkbox"] {
+		margin-top: 0;
+	}
+}
+
+.form-submit {
+	text-align: center;
+	margin-top: 50px;
+
+	.submit {
+		padding: 16px 60px;
+	}
+}
+
+.comment-reply-link {
+	border-radius: 20px;
+	font-size: 12px;
+	padding: 6px 18px;
+	text-transform: uppercase;
+	letter-spacing: var(--ignition-milos-letter-spacing-base);
+}
+
+.comment-author {
+	.avatar {
+		border-radius: var(--ignition-milos-border-radius-base);
+	}
+}

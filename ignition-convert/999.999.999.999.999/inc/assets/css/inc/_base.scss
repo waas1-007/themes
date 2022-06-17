@@ -1,0 +1,64 @@
+/* -----------------------------------------
+ Base theme styles
+----------------------------------------- */
+
+/* Main
+========================================= */
+.main {
+	padding: 80px 0;
+
+	@include media-breakpoint-down(md) {
+		padding: 60px 0;
+	}
+}
+
+/* Content
+========================================= */
+.entry-content {
+	> * {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 20px;
+	}
+
+	> &:last-child {
+		margin-bottom: 0;
+	}
+
+	.entry-title {
+		margin-bottom: 0;
+	}
+}
+
+/* Buttons
+========================================= */
+.btn,
+.button,
+.gutenbee-block-button-link,
+.wp-block-button__link,
+.ci-item-filter,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"] {
+	padding: 8px 30px;
+	border-radius: var(--ignition-convert-border-radius-base);
+}
+
+/* Social menu overrides
+========================================= */
+[id*=social].menu {
+	a {
+		border-radius: var(--ignition-convert-border-radius-base);
+	}
+}

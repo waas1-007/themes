@@ -1,0 +1,179 @@
+/* -----------------------------------------
+  WordPress Blocks general styles
+----------------------------------------- */
+
+/* Paragraph Block
+=================================== */
+.has-drop-cap:not(:focus) {
+	&::first-letter {
+		padding: .8rem .2rem .15rem 0;
+		font-size: 3.4rem !important;
+		line-height: .65;
+	}
+}
+
+/* File Block
+=================================== */
+.wp-block-file__content-wrapper {
+	.wp-block-file__button {
+		font-size: 14px;
+	}
+}
+
+/* Pullquote block
+=================================== */
+.wp-block-pullquote {
+	&.is-style-solid-color {
+		font-size: 1rem;
+		line-height: 1.33;
+		position: relative;
+		padding: 30px 30px 30px 80px;
+		border: 0;
+
+		&::before {
+			content: "\00201C";
+			font-style: normal;
+			font-size: 4rem;
+			line-height: 0;
+			position: absolute;
+			left: 30px;
+			top: 64px;
+		}
+
+		blockquote {
+			margin: 0;
+			max-width: 100%;
+
+			p {
+				font-size: 1rem;
+				line-height: 1.56;
+				font-weight: var(--ignition-font-weight-normal);
+			}
+
+			cite {
+				font-size: .875rem;
+				font-weight: var(--ignition-font-weight-normal);
+			}
+		}
+	}
+}
+
+/* Quote block
+=================================== */
+.wp-block-quote {
+	font-size: 1rem;
+	line-height: 1.33;
+	position: relative;
+	padding: 0 0 0 50px;
+	border: 0;
+
+	&::before {
+		content: "\00201C";
+		font-style: normal;
+		font-size: 4rem;
+		line-height: 0;
+		position: absolute;
+		left: 0;
+		top: 33px;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.56;
+		font-weight: var(--ignition-font-weight-normal);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	cite {
+		font-size: .875rem;
+		font-weight: var(--ignition-font-weight-normal);
+	}
+
+	&.is-style-large {
+		padding: 0 0 0 50px;
+
+		p {
+			font-size: 24px;
+		}
+	}
+
+	&.has-text-align-center {
+		padding: 0;
+
+		&::before {
+			display: block;
+			position: static;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&.has-text-align-right {
+		padding: 0 50px 0 0;
+
+		&::before {
+			left: auto;
+			right: 0;
+			top: -5px;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+/* -----------------------------------------
+  Gutenbee Plugin Blocks
+----------------------------------------- */
+
+/* Post Types - Slideshow style
+========================================= */
+.is-style-ignition-nozama-post-types-slideshow {
+	position: relative;
+
+	.slick-arrow {
+		position: absolute;
+		bottom: auto;
+		top: 2px;
+		left: auto;
+		right: 15px;
+		transform: translateY(calc(-100% - 35px));
+		margin-left: 0;
+		width: 46px;
+		height: 46px;
+		font-size: 12px;
+		border: 1px solid transparent;
+		background: var(--ignition-colors-grey);
+		border-radius: var(--ignition-theme-border-radius-base);
+		cursor: pointer;
+		z-index: 10;
+
+		@include media-breakpoint-down(xs) {
+			width: 36px;
+			height: 36px;
+		}
+
+		&:hover {
+			color: var(--ignition-colors-white);
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.slick-next {
+		margin-left: 10px;
+	}
+
+	.slick-prev {
+		transform: translate(calc(-100% - 5px), calc(-100% - 35px));
+	}
+}
+
+.wp-block-gutenbee-image {
+  &::after {
+		display: none !important;
+  }
+}

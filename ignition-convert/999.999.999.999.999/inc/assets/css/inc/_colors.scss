@@ -1,0 +1,139 @@
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+.entry-title a,
+.entry-item-title a,
+.entry-meta a,
+.wp-block-latest-posts > li > a,
+.has-drop-cap:not(:focus)::first-letter,
+.sidebar .widget_nav_menu .menu:not([id*="social"]) li > a {
+	color: var(--ignition-primary-color);
+}
+
+.sidebar .widget_nav_menu .menu:not([id*="social"]) .current_page_item > a,
+.sidebar .widget_nav_menu .menu:not([id*="social"]) .current-menu-item > a,
+.sidebar .widget_nav_menu .menu:not([id*="social"]) li > a:hover {
+	border-color: var(--ignition-primary-color);
+}
+
+.is-style-ignition-convert-item-overlay .entry-item::before,
+.wp-block-table.is-style-ignition-convert-table thead,
+.entry-list-meta,
+.sidebar .widget_nav_menu .menu:not([id*="social"]) .current_page_item > a,
+.sidebar .widget_nav_menu .menu:not([id*="social"]) .current-menu-item > a {
+	background-color: var(--ignition-primary-color);
+}
+
+/* Global - Secondary Color
+========================================= */
+.site-logo a:hover,
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a,
+.entry-title a:hover,
+.entry-item-title a:hover,
+.entry-meta a:hover,
+.entry-item-excerpt a:hover,
+.entry-item .woocommerce-loop-product__link:hover .woocommerce-loop-product__title,
+.wp-block-latest-posts > li > a:hover,
+.ignition-widget-item-title a:hover,
+.wp-block-pullquote.is-style-solid-color::before,
+.wp-block-quote::before {
+	color: var(--ignition-secondary-color);
+}
+
+.navigation-main li li:hover > a,
+.navigation-main li li > a:focus,
+.navigation-main li .current-menu-item > a,
+.navigation-main li .current-menu-parent > a,
+.navigation-main li .current-menu-ancestor > a,
+.navigation-main li .current_page_item > a,
+.navigation-main li .current_page_ancestor > a,
+.header-mini-cart-trigger .header-mini-cart-count {
+	background-color: var(--ignition-secondary-color);
+	color: var(--ignition-colors-white);
+}
+
+.ci-item-filter,
+.navigation-main .nav-button > a,
+.head-content-slot .nav-button > a,
+.footer-content-slot .nav-button > a {
+	&:focus,
+	&:hover {
+		background-color: var(--ignition-secondary-color);
+		border-color: var(--ignition-secondary-color);
+		color: var(--ignition-colors-white);
+	}
+}
+
+.ci-item-filter.filter-active {
+	background-color: var(--ignition-secondary-color);
+	border-color: var(--ignition-secondary-color);
+	color: var(--ignition-colors-white);
+}
+
+.widget-title {
+	border-color: var(--ignition-secondary-color);
+}
+
+/* Global - Secondary Text Color
+========================================= */
+.entry-meta,
+.entry-item-excerpt,
+blockquote cite,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date,
+.wp-block-quote cite {
+	color: var(--ignition-secondary-text-color);
+}
+
+/* Global - Border Color
+========================================= */
+.entry-header,
+.sidebar .widget_nav_menu .menu:not([id*="social"]) li > a {
+	border-color: var(--ignition-border-color);
+}
+
+/* Top Bar / Default Colors
+========================================= */
+.header-normal {
+	.head-intro {
+		border-bottom: 3px solid var(--ignition-top-bar-border-color);
+	}
+
+	.head-intro-inner {
+		&::after {
+			border-bottom: 0;
+		}
+	}
+
+	.head-mast {
+		box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+	}
+}
+
+/* Footer - Border Color
+========================================= */
+.footer {
+	border-color: var(--ignition-footer-border-color);
+}

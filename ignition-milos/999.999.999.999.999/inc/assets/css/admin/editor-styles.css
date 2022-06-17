@@ -1,0 +1,873 @@
+/* -----------------------------------------
+Block editor styles
+----------------------------------------- */
+
+/* -----------------------------------------
+	Base CSS Custom Properties (Variables)
+----------------------------------------- */
+
+:root {
+  --ignition-milos-border-radius-base: 4px;
+  --ignition-milos-letter-spacing-base: -.05em;
+}
+
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+
+.entry-item {
+  text-align: center;
+}
+
+.entry-item-media {
+  text-align: left;
+}
+
+.entry-meta {
+  margin-top: 10px;
+}
+
+.entry-item-excerpt {
+  position: relative;
+}
+
+.entry-item-title a,
+.entry-title a {
+  color: currentColor;
+}
+
+.entry-thumb img,
+.entry-item-thumb img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Single column default post styles
+========================================= */
+
+.row-columns-1 .entry-item-post .entry-header {
+  margin-bottom: 35px;
+}
+
+.row-columns-1 .entry-item-post .entry-title {
+  font-size: 48px;
+}
+
+.row-columns-1 .entry-item-post .entry-meta {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.row-columns-1 .entry-item-post .entry-thumb {
+  margin-bottom: 35px;
+}
+
+.row-columns-1 .entry-item-post .entry-item-content-wrap {
+  width: 750px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row-columns-1 .entry-item-post .entry-item-excerpt {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.row-columns-1 .entry-item-post .entry-more-btn {
+  padding: 16px 60px;
+}
+
+.letter-stylized {
+  display: block;
+  position: absolute;
+  font-size: 9rem;
+  font-weight: var(--ignition-font-weight-bold);
+  line-height: 1;
+  top: -20px;
+  left: -60px;
+  opacity: .105;
+  z-index: -1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Single post
+========================================= */
+
+.single .entry-header {
+  text-align: center;
+}
+
+.single .entry-header .entry-title {
+  font-size: 48px;
+}
+
+.single .entry-header .entry-meta {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.entry-section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Overlay items
+========================================= */
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) {
+  position: relative;
+  color: var(--ignition-colors-white);
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media)::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  padding: 30px;
+  background-color: rgba(35, 35, 35, 0.5);
+  pointer-events: none;
+  z-index: 2;
+  opacity: .5;
+  transition: opacity .18s ease;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover::before {
+  opacity: 1;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .woocommerce-loop-product__title,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .woocommerce-loop-product__link,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .price,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-title,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt {
+  color: var(--ignition-colors-white);
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 45px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-content a {
+  color: currentColor;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) img,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .price,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-thumb,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-thumb,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt {
+  margin-bottom: 0;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-thumb,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-thumb {
+  line-height: 0;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .button,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .btn-entry-more {
+  margin-top: 20px;
+  transition: opacity .18s ease;
+  opacity: 0;
+}
+
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+
+.entry-meta a,
+.ignition-widget-item-title a:hover {
+  color: var(--ignition-primary-color);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead,
+.mobile-nav-trigger,
+.navigation-main .nav-button > a {
+  background-color: var(--ignition-primary-color);
+}
+
+.navigation-main .nav-button > a {
+  border-color: var(--ignition-primary-color);
+}
+
+/* Global - Primary Text Color
+========================================= */
+
+/* Global - Secondary Text Color
+========================================= */
+
+.page-subtitle,
+.entry-item-excerpt,
+.ignition-widget-item-subtitle,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date {
+  color: var(--ignition-secondary-text-color);
+}
+
+/* Footer - Border Color
+========================================= */
+
+.footer {
+  border-top: 1px solid var(--ignition-footer-border-color);
+}
+
+/* -----------------------------------------
+  WordPress Blocks styles
+----------------------------------------- */
+
+/* Button Block
+=================================== */
+
+.btn,
+.gutenbee-block-button-link,
+.wp-block-button__link {
+  line-height: 1.3;
+  padding: 12px 32px;
+  text-transform: uppercase;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.gutenbee-block-button-link,
+.wp-block-button.is-style-outline .wp-block-button__link:not([class*="has-"]):hover,
+.wp-block-button__link {
+  background-color: var(--ignition-buttons-background-color);
+  color: var(--ignition-buttons-text-color);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not([class*="has-"]),
+.gutenbee-block-button-link {
+  border-color: var(--ignition-buttons-background-color);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not([class*="has-"]) {
+  color: var(--ignition-buttons-background-color);
+}
+
+/* Paragraph Block
+=================================== */
+
+.has-drop-cap:not(:focus)::first-letter {
+  padding: 0 .55rem 0 0;
+  font-size: 4rem;
+  line-height: .9;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+/* Separator Block
+=================================== */
+
+.wp-block-separator {
+  background-color: var(--ignition-border-color);
+}
+
+/* Pullquote Block
+=================================== */
+
+.wp-block-pullquote {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+  font-size: 1rem;
+  line-height: 1.33;
+  position: relative;
+  padding: 30px 30px 30px 80px;
+  border: 0;
+}
+
+.wp-block-pullquote.is-style-solid-color::before {
+  content: "\00201C";
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 30px;
+  top: 57px;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+  margin: 0;
+  max-width: 100%;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote p {
+  font-size: 1rem;
+  line-height: 1.56;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote .wp-block-pullquote__citation {
+  font-size: .875rem;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+/* Quote block
+=================================== */
+
+.wp-block-quote {
+  font-size: 1rem;
+  line-height: 1.33;
+  position: relative !important;
+  padding: 30px 30px 30px 80px;
+  border: 0;
+  background-color: var(--ignition-colors-grey);
+}
+
+.wp-block-quote::before {
+  content: "\00201C";
+  display: block;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 30px;
+  top: 57px;
+}
+
+.wp-block-quote p {
+  font-size: 1rem;
+  line-height: 1.56;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-quote cite {
+  font-size: .875rem;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-quote.is-style-large {
+  padding: 30px 30px 30px 80px;
+}
+
+.wp-block-quote.is-style-large::before {
+  content: "\00201C";
+  display: block;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 20px;
+}
+
+.wp-block-quote.has-text-align-center {
+  padding: 30px;
+}
+
+.wp-block-quote.has-text-align-center::before {
+  display: block;
+  position: static;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.wp-block-quote.has-text-align-right {
+  padding: 30px 80px 30px 30px;
+}
+
+.wp-block-quote.has-text-align-right::before {
+  left: auto;
+  right: 30px;
+  top: 30px;
+  transform: rotate(180deg);
+}
+
+/* Table block
+=================================== */
+
+.wp-block-table.is-style-ignition-milos-table {
+  border: 0;
+}
+
+.wp-block-table.is-style-ignition-milos-table thead {
+  color: var(--ignition-colors-white);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead th:first-child {
+  border-top-left-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead th:last-child {
+  border-top-right-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-table.is-style-ignition-milos-table tbody tr:nth-child(odd) {
+  background: none;
+}
+
+.wp-block-table.is-style-ignition-milos-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.wp-block-table.is-style-ignition-milos-table .has-background thead {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.wp-block-table.is-style-ignition-milos-table .has-background tfoot {
+  background: none;
+}
+
+.wp-block-table.is-style-ignition-milos-table .has-background tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Global Widget Block Styles
+=================================== */
+
+.wp-block-rss li a,
+.wp-block-archives li a,
+.wp-block-categories li a {
+  color: var(--ignition-text-color);
+}
+
+/* Tags
+=================================== */
+
+.tag-cloud-link {
+  color: var(--ignition-text-color);
+}
+
+/* Search Widget Block
+=================================== */
+
+.wp-block-search .wp-block-search__button {
+  background: var(--ignition-primary-color);
+  color: var(--ignition-colors-white);
+}
+
+/* Latest Posts block
+=================================== */
+
+.wp-block-latest-posts .wp-block-latest-posts__featured-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-latest-posts > li > a {
+  color: var(--ignition-text-color);
+}
+
+.wp-block-latest-posts > li > a:hover {
+  color: var(--ignition-primary-color);
+}
+
+/* File Block
+=================================== */
+
+.wp-block-file__content-wrapper .wp-block-file__button {
+  background-color: var(--ignition-primary-color);
+  color: var(--ignition-colors-white);
+}
+
+/* Image block
+=================================== */
+
+.wp-block-image.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Gallery block
+=================================== */
+
+.wp-block-gallery.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-gallery.is-style-ignition-milos-border-image figcaption {
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+}
+
+/* Media & Text block
+=================================== */
+
+.wp-block-media-text.is-style-ignition-milos-border-image .wp-block-media-text__media {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-media-text.is-style-ignition-milos-border-image.is-image-fill .wp-block-media-text__media {
+  position: relative;
+  box-shadow: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.wp-block-media-text.is-style-ignition-milos-border-image.is-image-fill .wp-block-media-text__media::before {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+  background: none;
+  border: 10px solid var(--ignition-colors-white);
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cover block
+=================================== */
+
+.wp-block-cover.is-style-ignition-milos-border-image::after {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+  background: none;
+  border: 10px solid var(--ignition-colors-white);
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Video block
+=================================== */
+
+.wp-block-video.is-style-ignition-milos-border-image video {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Embeds block (Needs custom class)
+=================================== */
+
+.wp-block-embed.is-style-ignition-milos-border-image iframe {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* -----------------------------------------
+  Gutenbee Plugin Blocks
+----------------------------------------- */
+
+/* Image block
+=================================== */
+
+.wp-block-gutenbee-image.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Image Box block
+=================================== */
+
+.wp-block-gutenbee-imagebox.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Gallery block
+=================================== */
+
+.wp-block-gutenbee-justified-gallery.is-style-ignition-milos-border-image {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Video block
+=================================== */
+
+.wp-block-gutenbee-video.is-style-ignition-milos-border-image video {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Slideshow block
+=================================== */
+
+.wp-block-gutenbee-slideshow.is-style-ignition-milos-border-image {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-gutenbee-slideshow.is-style-ignition-milos-border-image .slick-dots {
+  bottom: 15px;
+}
+
+/* Maps block
+=================================== */
+
+.wp-block-gutenbee-google-maps.is-style-ignition-milos-border-image {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* -----------------------------------------
+  WooCommerce Blocks
+----------------------------------------- */
+
+/* Featured Category Block
+========================================= */
+
+.wc-block-featured-category.is-style-ignition-milos-border-image::after {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+  background: none;
+  border: 10px solid var(--ignition-colors-white);
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Featured Product Block
+========================================= */
+
+.wc-block-featured-product.is-style-ignition-milos-border-image::after {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+  background: none;
+  border: 10px solid var(--ignition-colors-white);
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* WooCommerce - Product Listings
+=================================== */
+
+.wc-block-grid__products .wc-block-grid__product img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-link:hover {
+  color: var(--ignition-primary-color);
+}
+
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title a {
+  color: var(--ignition-text-color);
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title a:hover {
+  color: var(--ignition-primary-color);
+}
+
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-onsale {
+  position: absolute;
+  top: 15px !important;
+  right: 15px !important;
+  left: auto !important;
+  background-color: var(--ignition-primary-color);
+  font-weight: var(--ignition-font-weight-bold);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.wc-block-grid__products .wc-block-grid__product .button,
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link {
+  line-height: 1.3;
+  padding: 12px 32px;
+  text-transform: uppercase;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+  border-radius: 30px !important;
+  font-size: 12px;
+}
+
+.wc-block-pagination .wc-block-pagination-page {
+  border-color: 2px solid var(--ignition-border-color);
+  color: var(--ignition-text-color);
+  border-radius: var(--ignition-milos-border-radius-base);
+  font-weight: var(--ignition-font-weight-bold);
+  font-size: 13px;
+}
+
+.wc-block-pagination .wc-block-pagination-page.wc-block-pagination-page--active,
+.wc-block-pagination .wc-block-pagination-page:hover {
+  color: var(--ignition-colors-white);
+}
+
+/* Reviews block
+========================================= */
+
+.wc-block-review-list .wc-block-review-list-item__published-date {
+  color: var(--ignition-text-color-light);
+}
+
+.wc-block-review-list .wc-block-review-list-item__product a {
+  color: var(--ignition-text-color);
+}
+
+/* Product Categories block
+========================================= */
+
+.wc-block-product-categories-list li a {
+  color: var(--ignition-text-color);
+}
+
+.wc-block-product-categories .wc-block-product-categories__button {
+  border-color: var(--ignition-border-color);
+}
+
+/* Attribute Filters block
+========================================= */
+
+.wc-block-attribute-filter .wc-block-attribute-filter-list [type="checkbox"]:checked + label {
+  color: var(--ignition-primary-color);
+}
+
+.wc-block-attribute-filter .wc-block-attribute-filter-list label {
+  color: var(--ignition-text-color);
+}
+
+/* Active Filters block
+========================================= */
+
+.wc-block-active-filters .wc-block-active-filters__list.wc-block-active-filters__list--chips li.wc-block-active-filters__list-item {
+  color: var(--ignition-text-color);
+}
+
+/* Filter by Price block
+========================================= */
+
+.wc-block-price-filter .wc-block-price-filter__range-input-wrapper .wc-block-price-filter__range-input-progress {
+  --range-color: var(--ignition-border-color);
+}
+
+/* Sort Select Element block
+========================================= */
+
+.wc-block-sort-select .wc-block-sort-select__select {
+  color: var(--ignition-text-color);
+}
+
+@media (min-width: 992px) {
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-title {
+    font-size: 24px;
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-title,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt {
+    transform: translateY(100%);
+    transition: transform .18s ease;
+    margin: 0;
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .btn-entry-more {
+    opacity: 0;
+    color: var(--ignition-button-text-color);
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-item-title,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-item-title,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-meta {
+    transform: translateY(0);
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .btn-entry-more,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .btn-entry-more {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .btn-entry-more {
+    display: none;
+  }
+}

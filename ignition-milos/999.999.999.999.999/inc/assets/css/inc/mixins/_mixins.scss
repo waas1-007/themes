@@ -1,0 +1,6 @@
+@mixin border-image($padding: 15px, $box-shadow-width: 20px) {
+	padding: $padding;
+	background-color: var(--ignition-body-background-color);
+	box-shadow: 0 0 $box-shadow-width rgba(#000, .1);
+	border-radius: var(--ignition-milos-border-radius-base);
+}

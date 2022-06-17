@@ -1,0 +1,27 @@
+/* -----------------------------------------
+	Elementor Styling
+----------------------------------------- */
+
+.elementor-widget-ci_post_types {
+    .entry-item-thumb {
+        img {
+            border-radius: var(--ignition-theme-border-radius-base) var(--ignition-theme-border-radius-base) 0 0;
+        }
+    }
+
+    .entry-thumb {
+        img {
+            border-radius: var(--ignition-theme-border-radius-base);
+        }
+    }
+
+    .product {
+        .entry-item-thumb {
+            margin-bottom: 0 !important;
+
+            img {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

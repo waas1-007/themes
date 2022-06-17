@@ -1,0 +1,70 @@
+/* -----------------------------------------
+ Header
+----------------------------------------- */
+
+/* Top bar
+========================================= */
+.head-intro {
+	font-size: 13px;
+}
+
+.head-intro-inner {
+	padding: 15px 0;
+}
+
+/* Mast head
+========================================= */
+.head-mast {
+	font-size: 16px;
+}
+
+/* Branding
+========================================= */
+.site-logo {
+	letter-spacing: var(--ignition-medi-letter-spacing-base);
+}
+
+/* Page hero
+========================================= */
+.page-hero-content {
+	@include media-breakpoint-down(xs) {
+		text-align: center;
+
+		.woocommerce-breadcrumb {
+			justify-content: center;
+		}
+	}
+}
+
+.page-hero-title {
+	margin: 0;
+}
+
+.page-hero-subtitle {
+	margin: 5px 0 0;
+	line-height: 1.45;
+}
+
+/* Page title (in content)
+========================================= */
+.page-title-wrap {
+	margin-bottom: 50px;
+}
+
+.page-subtitle {
+	margin: 5px 0 0;
+	line-height: 1.45;
+}
+
+.page-title-description,
+.page-subtitle,
+.page-hero-subtitle {
+	font-size: 1rem;
+}
+
+.page-hero-content,
+.page-title-content {
+	@include media-breakpoint-up(xl) {
+		width: 50%;
+	}
+}

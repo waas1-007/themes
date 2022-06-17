@@ -1,0 +1,594 @@
+/*
+Theme Name:       Petshop
+Theme URI:        https://www.woocommerce.com/products/petshop/
+Description:      A Storefront child theme for pet shops.
+Author:           WooCommerce
+Author URI:       https://woocommerce.com
+Template:         storefront
+Version:          1.1.6
+License:          GNU General Public License v2 or later
+License URI:      http://www.gnu.org/licenses/gpl-2.0.html
+Tags:             light, dark, two-columns, right-sidebar, left-sidebar, responsive-layout, accessibility-ready
+Text Domain:      petshop
+*/
+/* Fonts */
+body {
+  font-family: "Lato", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold; }
+
+.woocommerce-tabs ul.tabs li a,
+.page-template-template-homepage-php ul.tabs li a {
+  font-family: "Montserrat", sans-serif; }
+
+.onsale {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.added_to_cart,
+.page-template-template-homepage-php ul.tabs li a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+/* Storefront Designer Custom Fonts */
+.sd-typography-roboto-slab button,
+.sd-typography-roboto-slab input[type="button"],
+.sd-typography-roboto-slab input[type="reset"],
+.sd-typography-roboto-slab input[type="submit"],
+.sd-typography-roboto-slab .button,
+.sd-typography-roboto-slab .added_to_cart,
+.sd-typography-roboto-slab .onsale,
+.sd-typography-roboto-slab .woocommerce-tabs ul.tabs li a,
+.sd-typography-roboto-slab.page-template-template-homepage-php ul.tabs li a {
+  font-family: 'Roboto Slab'; }
+
+.sd-typography-lora button,
+.sd-typography-lora input[type="button"],
+.sd-typography-lora input[type="reset"],
+.sd-typography-lora input[type="submit"],
+.sd-typography-lora .button,
+.sd-typography-lora .added_to_cart,
+.sd-typography-lora .onsale,
+.sd-typography-lora .woocommerce-tabs ul.tabs li a,
+.sd-typography-lora.page-template-template-homepage-php ul.tabs li a {
+  font-family: 'Lora'; }
+
+.sd-typography-courier button,
+.sd-typography-courier input[type="button"],
+.sd-typography-courier input[type="reset"],
+.sd-typography-courier input[type="submit"],
+.sd-typography-courier .button,
+.sd-typography-courier .added_to_cart,
+.sd-typography-courier .onsale,
+.sd-typography-courier .woocommerce-tabs ul.tabs li a,
+.sd-typography-courier.page-template-template-homepage-php ul.tabs li a {
+  font-family: 'Courier'; }
+
+/* Global */
+body {
+  background-color: #f7f3ef;
+  background-size: 536px auto;
+  border-color: #e5e0da; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.3s;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  input[type="text"]:active, input[type="text"]:focus,
+  input[type="email"]:active,
+  input[type="email"]:focus,
+  input[type="url"]:active,
+  input[type="url"]:focus,
+  input[type="password"]:active,
+  input[type="password"]:focus,
+  input[type="search"]:active,
+  input[type="search"]:focus,
+  textarea:active,
+  textarea:focus,
+  .input-text:active,
+  .input-text:focus {
+    background-color: #e5e0da; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.added_to_cart {
+  border-radius: 3px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  transition: 0.3s; }
+
+/* Storefront */
+.site-header .petshop-primary-navigation {
+  clear: both;
+  margin-right: -55em;
+  margin-left: -55em;
+  padding-right: 55em;
+  padding-left: 55em; }
+  .site-header .petshop-primary-navigation:before, .site-header .petshop-primary-navigation:after {
+    content: '';
+    display: block; }
+  .site-header .petshop-primary-navigation:after {
+    clear: both; }
+
+.hentry {
+  border-width: 3px; }
+
+.hentry .entry-header {
+  border-bottom: 0; }
+
+.hentry .entry-header h1 {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.05); }
+
+.entry-title {
+  margin-top: .275em;
+  padding-bottom: .275em; }
+
+p.site-description,
+.main-navigation ul li.current-menu-item > a,
+.site-header {
+  color: #fff; }
+
+.main-navigation ul li a:before {
+  background-image: url("assets/images/paw.png");
+  background-position: 0% 0;
+  background-size: 15px auto;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 15px;
+  height: 15px;
+  padding-right: 1em; }
+
+button.menu-toggle {
+  background: rgba(0, 0, 0, 0.15);
+  border: 0;
+  float: right; }
+  button.menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.05); }
+
+.site-header {
+  padding-top: 1.309em;
+  border-bottom: 0; }
+
+.site-branding .site-title {
+  font-family: "Montserrat", sans-serif; }
+
+.main-navigation {
+  padding-top: 1em; }
+
+.site-header,
+.site-footer {
+  background-image: url("assets/images/wood.png");
+  background-size: auto 100%;
+  background-repeat: repeat-y; }
+
+ul.menu li.current-menu-item > a {
+  color: currentColor; }
+
+.onsale {
+  position: absolute;
+  top: 10px;
+  right: -27px;
+  padding-right: 2em;
+  padding-left: 2em;
+  transform: rotate(45deg);
+  z-index: 1000; }
+
+.site-header-cart .widget_shopping_cart,
+.widget-area .widget_shopping_cart {
+  border: 3px solid #e5e0da; }
+
+.widget-area .widget_shopping_cart {
+  padding: .5em 1.5em; }
+
+.widget h3.widget-title,
+.widget h2.widgettitle {
+  border-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1.2; }
+
+.widget_nav_menu ul li:before {
+  content: "";
+  background-image: url("assets/images/paw-bullet.png");
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+  background-position: 50% 100%;
+  width: 12px;
+  height: 21px; }
+
+.footer-widgets .widget_nav_menu ul li:before {
+  background-image: url("assets/images/paw.png");
+  background-size: 14px auto;
+  width: 14px;
+  height: 24px; }
+
+.storefront-product-section {
+  border-width: 3px; }
+
+ul.products li.product {
+  overflow: hidden; }
+
+.petshop-product-image {
+  position: relative; }
+
+ul.products li.product img {
+  border-radius: 3px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #e5e0da;
+  margin-right: 0; }
+
+ul.products li.product .button,
+ul.products li.product .added_to_cart {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transition: 0.3s;
+  width: 140px; }
+
+ul.products li.product .added_to_cart {
+  top: 70%; }
+
+ul.products li.product:hover .button,
+ul.products li.product:hover .added_to_cart {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s; }
+
+ul.products li.product h3,
+ul.products li.product h2,
+ul.products li.product .woocommerce-loop-product__title {
+  clear: none;
+  float: right;
+  line-height: 1.4;
+  text-align: right;
+  max-width: 53%; }
+
+ul.products li.product-category.product h3,
+ul.products li.product-category.product h2,
+ul.products li.product-category.product .woocommerce-loop-product__title {
+  float: none;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+  position: relative; }
+
+.widget_search form:before,
+.widget_product_search form:before {
+  color: #341f1f; }
+
+.error404 .site-content .widget_product_search {
+  padding: 0; }
+
+ul.products li.product-category.product h3:before,
+ul.products li.product-category.product h2:before,
+ul.products li.product-category.product .woocommerce-loop-product__title:before {
+  background-image: url("assets/images/paw.png"), url("assets/images/wood.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 7px, 100% 0;
+  background-size: 35px auto, 1000px auto;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 40px;
+  border-radius: 80px 80px 0 0;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: -63px; }
+
+ul.products li.product.product-category img {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto; }
+
+ul.products li.product .price {
+  max-width: 45%;
+  text-align: left;
+  float: left;
+  line-height: 1.4; }
+
+ul.products li.product .star-rating {
+  clear: both;
+  margin: 0 0 1em; }
+
+ul.products li.product div[itemprop=description] {
+  clear: both;
+  text-align: right; }
+
+.woocommerce-breadcrumb {
+  background-color: transparent; }
+  .woocommerce-breadcrumb span {
+    margin: 0 4px; }
+
+.widget_shopping_cart .widget-title {
+  margin-top: .5em; }
+
+.site-header .widget_shopping_cart li,
+.site-header .widget_shopping_cart p.buttons,
+.site-header .widget_shopping_cart p.total {
+  background-color: transparent; }
+
+.pagination .page-numbers li .page-numbers,
+.woocommerce-pagination .page-numbers li .page-numbers,
+.pagination .page-numbers li .page-numbers.current,
+.woocommerce-pagination .page-numbers li .page-numbers.current {
+  border-radius: 2px; }
+
+.woocommerce-pagination .page-numbers {
+  margin-right: .236em; }
+
+.sph-hero .sph-inner-wrapper {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 3px; }
+
+.sph-hero h1 {
+  margin-top: 1em; }
+
+.sph-hero .sph-hero-content-wrapper {
+  margin-bottom: 2em; }
+
+.sph-hero.fixed,
+.sprh-hero.fixed {
+  border-radius: 3px; }
+
+.smm-mega-menu {
+  background-image: url("assets/images/wood.png");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  border-radius: 0 0 3px 3px; }
+
+.smm-mega-menu ul {
+  background-color: transparent !important; }
+
+.page-template-template-homepage .site-main .sprh-hero.fixed:first-child {
+  margin-top: auto; }
+
+.sfb-footer-bar {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15); }
+
+/* Galleries */
+.wp-caption-text,
+.gallery-caption {
+  font-style: italic; }
+
+.gallery {
+  margin-bottom: 1.5em; }
+  .gallery .gallery-item {
+    float: none; }
+  .gallery .gallery-caption {
+    display: block;
+    font-size: .875em; }
+
+.gallery-item {
+  display: inline-block;
+  padding: .236em;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+  .gallery-item img {
+    display: inline-block; }
+
+/* Comments */
+#respond {
+  border-top: 0; }
+
+#ship-to-different-address label {
+  font-weight: 700; }
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .site-header {
+    padding-top: 40px;
+    background-size: 100% auto; }
+  .woocommerce-active .site-header .site-header-cart {
+    padding-top: 0; }
+  .site-header .petshop-primary-navigation {
+    border-top: 3px solid rgba(0, 0, 0, 0.15); }
+  .main-navigation {
+    padding-top: 0; }
+  .main-navigation ul li a:before {
+    display: none; }
+  .main-navigation ul.menu > li > a,
+  .main-navigation ul.nav-menu > li > a,
+  .site-header-cart .cart-contents,
+  .main-navigation ul li a {
+    padding-bottom: .88em;
+    padding-top: .88em; }
+  .main-navigation ul.menu ul li,
+  .main-navigation ul.nav-menu ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .main-navigation ul ul {
+    border-radius: 0 0 3px 3px; }
+    .main-navigation ul ul li:last-of-type {
+      border-radius: 0 0 3px 3px; }
+  .main-navigation ul ul ul {
+    border-radius: 3px 0 0 3px; }
+    .main-navigation ul ul ul li:last-of-type {
+      border-radius: 0; }
+  .onsale {
+    top: 9px;
+    right: -23px; }
+  .single-product .onsale {
+    top: 10px;
+    right: -27px; }
+  .woocommerce-tabs ul.tabs,
+  .page-template-template-homepage-php ul.tabs {
+    background-image: url("assets/images/wood.png");
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-size: auto auto;
+    border-radius: 3px;
+    margin: 0 auto 1.618em;
+    z-index: 6; }
+    .woocommerce-tabs ul.tabs li,
+    .page-template-template-homepage-php ul.tabs li {
+      display: block;
+      border: 0; }
+      .woocommerce-tabs ul.tabs li.active:after,
+      .page-template-template-homepage-php ul.tabs li.active:after {
+        color: white; }
+      .woocommerce-tabs ul.tabs li:first-of-type a,
+      .page-template-template-homepage-php ul.tabs li:first-of-type a {
+        border-radius: 3px 3px 0 0; }
+      .woocommerce-tabs ul.tabs li:last-of-type a,
+      .page-template-template-homepage-php ul.tabs li:last-of-type a {
+        border-radius: 0 0 3px 3px; }
+      .woocommerce-tabs ul.tabs li a,
+      .page-template-template-homepage-php ul.tabs li a {
+        padding: 1em 1.317em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        display: block;
+        outline-color: transparent; }
+        .woocommerce-tabs ul.tabs li a.active,
+        .page-template-template-homepage-php ul.tabs li a.active {
+          position: relative; }
+          .woocommerce-tabs ul.tabs li a.active:after,
+          .page-template-template-homepage-php ul.tabs li a.active:after {
+            content: "";
+            color: white;
+            display: block;
+            font-family: FontAwesome;
+            position: absolute;
+            right: 50%;
+            bottom: -2em;
+            border: 1em solid transparent;
+            margin-right: -1em;
+            z-index: 999; }
+  .page-template-template-homepage-php .storefront-recent-products,
+  .page-template-template-homepage-php .storefront-popular-products,
+  .page-template-template-homepage-php .storefront-on-sale-products,
+  .page-template-template-homepage-php .storefront-featured-products,
+  .page-template-template-homepage-php .storefront-best-selling-products {
+    border-bottom: 0;
+    margin-bottom: 1.059em;
+    width: 65.2173913043%;
+    float: left;
+    margin-left: 0; }
+    .page-template-template-homepage-php .storefront-recent-products .columns-2 ul.products li.product,
+    .page-template-template-homepage-php .storefront-popular-products .columns-2 ul.products li.product,
+    .page-template-template-homepage-php .storefront-on-sale-products .columns-2 ul.products li.product,
+    .page-template-template-homepage-php .storefront-featured-products .columns-2 ul.products li.product,
+    .page-template-template-homepage-php .storefront-best-selling-products .columns-2 ul.products li.product {
+      width: 46.6666666667%;
+      float: right;
+      margin-left: 6.6666666667%; }
+    .page-template-template-homepage-php .storefront-recent-products .columns-3 ul.products li.product,
+    .page-template-template-homepage-php .storefront-popular-products .columns-3 ul.products li.product,
+    .page-template-template-homepage-php .storefront-on-sale-products .columns-3 ul.products li.product,
+    .page-template-template-homepage-php .storefront-featured-products .columns-3 ul.products li.product,
+    .page-template-template-homepage-php .storefront-best-selling-products .columns-3 ul.products li.product {
+      width: 28.8888888933%;
+      float: right;
+      margin-left: 6.6666666667%; }
+    .page-template-template-homepage-php .storefront-recent-products .columns-4 ul.products li.product,
+    .page-template-template-homepage-php .storefront-popular-products .columns-4 ul.products li.product,
+    .page-template-template-homepage-php .storefront-on-sale-products .columns-4 ul.products li.product,
+    .page-template-template-homepage-php .storefront-featured-products .columns-4 ul.products li.product,
+    .page-template-template-homepage-php .storefront-best-selling-products .columns-4 ul.products li.product {
+      width: 20%;
+      float: right;
+      margin-left: 6.6666666667%; }
+  .page-template-template-homepage-php ul.tabs {
+    width: 30.4347826087%;
+    float: right;
+    margin-left: 4.347826087%;
+    z-index: 6; }
+    .page-template-template-homepage-php ul.tabs li a {
+      position: relative; }
+      .page-template-template-homepage-php ul.tabs li a:before {
+        content: "\f0e7";
+        font-family: "FontAwesome";
+        font-weight: 400;
+        margin-left: .618em; }
+      .page-template-template-homepage-php ul.tabs li a.active {
+        position: relative; }
+        .page-template-template-homepage-php ul.tabs li a.active:after {
+          content: "\f105";
+          right: auto;
+          bottom: auto;
+          top: 0;
+          left: 0;
+          display: inline-block; }
+    .page-template-template-homepage-php ul.tabs li.featured a:before, .page-template-template-homepage-php ul.tabs li.recommend a:before {
+      content: "";
+      background-image: url("assets/images/paw.png");
+      background-size: 17px auto;
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      display: inline-block;
+      width: 17px;
+      height: 15px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px; }
+    .page-template-template-homepage-php ul.tabs li.rated a:before, .page-template-template-homepage-php ul.tabs li.favorites a:before {
+      content: "\f091"; }
+    .page-template-template-homepage-php ul.tabs li.sale a:before {
+      content: "\f0a3"; }
+    .page-template-template-homepage-php ul.tabs li.sellers a:before {
+      content: "\f005"; } }
+
+/**
+ * Storefront 2.3
+ */
+@media screen and (min-width: 768px) {
+  .storefront-2-3 .woocommerce-tabs ul.tabs li a.active:after,
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li a.active:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; }
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li a:before {
+    content: "\f0e7";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; }
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li a.active:after {
+    content: "\f105"; }
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li.featured a:before, .storefront-2-3.page-template-template-homepage-php ul.tabs li.recommend a:before {
+    content: ""; }
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li.rated a:before, .storefront-2-3.page-template-template-homepage-php ul.tabs li.favorites a:before {
+    content: "\f091"; }
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li.sale a:before {
+    content: "\f0a3"; }
+  .storefront-2-3.page-template-template-homepage-php ul.tabs li.sellers a:before {
+    content: "\f005"; } }

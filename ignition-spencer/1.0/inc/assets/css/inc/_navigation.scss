@@ -1,0 +1,56 @@
+/* -----------------------------------------
+	Navigation
+----------------------------------------- */
+
+/* Main Navigation
+========================================= */
+.navigation-main {
+	// Sub-menu containers
+	ul {
+		padding: 12px 0;
+		border-radius: var(--ignition-spencer-border-radius-base);
+		min-width: 170px;
+		box-shadow: 0 0 24px rgba(#000, .08);
+	}
+
+	// Global Menu Link Styles
+	a {
+		font-size: 1em;
+	}
+
+	// First Level Menu Links
+	// -----------------------------------
+	// Default Styles
+	> li > a {
+		padding: 10px 0;
+		margin: 0 10px;
+		position: relative;
+		color: currentColor;
+	}
+
+	// Sub-Menu Links
+	// -----------------------------------
+
+	// Default Styles
+	li li a {
+		padding: 6px 15px;
+		font-size: 1em;
+	}
+
+	// Nav button
+	// -----------------------------------
+
+	.nav-button {
+		> a {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+/* Mobile Navigation
+========================================= */
+.mobile-nav-trigger {
+	font-weight: var(--ignition-font-weight-normal);
+}

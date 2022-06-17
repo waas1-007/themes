@@ -1,0 +1,57 @@
+/* -----------------------------------------
+	MaxSlider Styling
+----------------------------------------- */
+
+.ignition-slideshow .maxslider-slide-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.ignition-slideshow .maxslider-slide-title {
+  margin-bottom: 20px;
+}
+
+.ignition-slideshow .maxslider-btn {
+  margin-top: 25px;
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.maxslider {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.maxslider .maxslider-slide-content {
+  padding: 50px;
+}
+
+.maxslider .maxslider-btn {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+@media (min-width: 768px) {
+  .ignition-slideshow .maxslider-slide-content-pad {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1230px) {
+  .ignition-slideshow .maxslider-slide-content-pad {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .ignition-slideshow .maxslider-slide-content-pad .maxslider-slide-title {
+    font-size: 38px;
+  }
+
+  .ignition-slideshow .maxslider-slide-content-pad .maxslider-slide-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .maxslider .maxslider-slide-content {
+    padding: 40px 25px;
+  }
+}

@@ -1,0 +1,81 @@
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* General
+=================================== */
+.widget-title {
+	margin-bottom: 25px;
+	padding-top: 25px;
+	border-top: solid 3px;
+}
+
+/* Tags widget
+=================================== */
+.tag-cloud-link {
+	border-radius: var(--ignition-medi-border-radius-base);
+}
+
+/* Navigation Menus
+=================================== */
+.sidebar {
+	.widget_ignition-page-children-menu .menu,
+	.widget_nav_menu .menu:not([id*="social"]) {
+		li {
+			> a {
+				background-color: var(--ignition-colors-grey);
+				border-left: 3px solid;
+				padding: 18px;
+				margin-bottom: 1px;
+				border-bottom: none;
+				border-radius: 0;
+				font-weight: 700;
+				transition: all 0.2s ease;
+				display: block;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.current-menu-item,
+		.current_page_item {
+			> a {
+				border: 0;
+				position: relative;
+				color: var(--ignition-colors-white);
+			}
+		}
+	}
+}
+
+/* Item Widgets
+=================================== */
+.ignition-widget-item {
+	a {
+		.footer & {
+			color: currentColor;
+		}
+	}
+}
+
+/* Social Icons
+=================================== */
+[id*="social"].menu a {
+	.footer & {
+		&:hover {
+			color: var(--ignition-colors-white);
+		}
+	}
+}
+
+/* Call to Action
+=================================== */
+.ignition-box-callout {
+	.btn {
+		font-weight: var(--ignition-font-weight-bold);
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}

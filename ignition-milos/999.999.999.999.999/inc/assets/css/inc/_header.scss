@@ -1,0 +1,60 @@
+/* -----------------------------------------
+ Header
+----------------------------------------- */
+
+/* Top bar
+========================================= */
+.head-intro {
+	font-size: 13px;
+}
+
+.head-intro-inner {
+	padding: 12px 0;
+}
+
+/* Mast head
+========================================= */
+.head-mast {
+	font-size: 16px;
+}
+
+.head-mast-inner {
+	padding: 25px 0;
+}
+
+/* Branding
+========================================= */
+.site-logo {
+	font-weight: var(--ignition-font-weight-normal);
+	font-size: 30px;
+	letter-spacing: var(--ignition-milos-letter-spacing-base);
+}
+
+/* Page hero
+========================================= */
+.page-hero-content {
+	@include media-breakpoint-down(xs) {
+		text-align: center;
+
+		.woocommerce-breadcrumb {
+			justify-content: center;
+		}
+	}
+}
+
+.page-hero-title {
+	margin: 0;
+}
+
+.page-subtitle,
+.page-hero-subtitle {
+	margin: 15px 0 0;
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+/* Page title (in content)
+========================================= */
+.page-title-wrap {
+	margin-bottom: 60px;
+}

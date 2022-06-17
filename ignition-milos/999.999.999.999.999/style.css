@@ -1,0 +1,1059 @@
+/*!
+Theme Name: Milos - Ignition
+Theme URI: https://www.cssigniter.com/themes/milos/
+Author: CSSIgniter
+Author URI: https://www.cssigniter.com/
+Description: Hotel / Business theme for WordPress
+Version: 1.1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ignition-milos
+RequiresIgnition: 2.0.0
+*/
+
+/* -----------------------------------------
+	Table of Contents
+--------------------------------------------
+
+.. Theme Variables
+.. General / Base
+.. Forms
+.. Main Navigation
+.. Header
+.. Archives
+.. Comments
+.. Widgets
+.. Blocks
+.. Footer
+.. Editor Palette
+.. Theme Colors
+*/
+
+/* -----------------------------------------
+	Base CSS Custom Properties (Variables)
+----------------------------------------- */
+
+:root {
+  --ignition-milos-border-radius-base: 4px;
+  --ignition-milos-letter-spacing-base: -.05em;
+}
+
+/* -----------------------------------------
+ Base theme styles
+----------------------------------------- */
+
+/* Main
+========================================= */
+
+.main {
+  padding: 60px 0;
+}
+
+/* Social Icons
+========================================= */
+
+[id*=social].menu a {
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Pagination
+========================================= */
+
+.navigation {
+  margin-top: 60px;
+}
+
+.navigation a,
+.navigation .page-numbers {
+  border-radius: var(--ignition-milos-border-radius-base);
+  font-weight: var(--ignition-font-weight-bold);
+  font-size: 13px !important;
+}
+
+/* Buttons
+========================================= */
+
+.btn,
+.button,
+.gutenbee-block-button-link,
+.wp-block-button__link,
+.ci-item-filter,
+.ignition-slideshow .maxslider-btn,
+.added_to_cart,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"] {
+  line-height: 1.3;
+  padding: 12px 32px;
+  text-transform: uppercase;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.ignition-slideshow .maxslider-btn-lg {
+  padding: 20px 56px;
+}
+
+/* -----------------------------------------
+ Forms
+----------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="time"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+  border-radius: 1px;
+  font-size: 14px;
+}
+
+label,
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+}
+
+.wpcf7-form-control {
+  margin-bottom: 25px;
+}
+
+/* -----------------------------------------
+	Navigation
+----------------------------------------- */
+
+/* Main Navigation
+========================================= */
+
+.navigation-main ul {
+  padding: 15px 5px;
+  border-radius: 0;
+  min-width: 220px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+}
+
+.navigation-main a {
+  font-size: 1em;
+}
+
+.navigation-main > li > a {
+  padding: 10px 0;
+  margin: 0 10px;
+  position: relative;
+  color: currentColor;
+}
+
+.navigation-main li li a {
+  padding: 6px 15px;
+  font-size: 0.93em;
+}
+
+.navigation-main .nav-button > a {
+  line-height: 1.3;
+  padding: 10px 26px;
+  text-transform: uppercase;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+  border-radius: 30px;
+  font-size: 12px;
+  color: var(--ignition-colors-white);
+}
+
+.navigation-main .nav-button > a::before {
+  display: none;
+}
+
+/* Mobile Navigation
+========================================= */
+
+.head-content-slot-mobile-nav .mobile-nav-trigger {
+  color: var(--ignition-colors-white);
+  font-weight: var(--ignition-font-weight-normal);
+  border-radius: 30px;
+  border: 0;
+}
+
+/* -----------------------------------------
+ Header
+----------------------------------------- */
+
+/* Top bar
+========================================= */
+
+.head-intro {
+  font-size: 13px;
+}
+
+.head-intro-inner {
+  padding: 12px 0;
+}
+
+/* Mast head
+========================================= */
+
+.head-mast {
+  font-size: 16px;
+}
+
+.head-mast-inner {
+  padding: 25px 0;
+}
+
+/* Branding
+========================================= */
+
+.site-logo {
+  font-weight: var(--ignition-font-weight-normal);
+  font-size: 30px;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+}
+
+/* Page hero
+========================================= */
+
+.page-hero-title {
+  margin: 0;
+}
+
+.page-subtitle,
+.page-hero-subtitle {
+  margin: 15px 0 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Page title (in content)
+========================================= */
+
+.page-title-wrap {
+  margin-bottom: 60px;
+}
+
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+
+.entry-item {
+  text-align: center;
+}
+
+.entry-item-media {
+  text-align: left;
+}
+
+.entry-meta {
+  margin-top: 10px;
+}
+
+.entry-item-excerpt {
+  position: relative;
+}
+
+.entry-item-title a,
+.entry-title a {
+  color: currentColor;
+}
+
+.entry-thumb img,
+.entry-item-thumb img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Single column default post styles
+========================================= */
+
+.row-columns-1 .entry-item-post .entry-header {
+  margin-bottom: 35px;
+}
+
+.row-columns-1 .entry-item-post .entry-title {
+  font-size: 48px;
+}
+
+.row-columns-1 .entry-item-post .entry-meta {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.row-columns-1 .entry-item-post .entry-thumb {
+  margin-bottom: 35px;
+}
+
+.row-columns-1 .entry-item-post .entry-item-content-wrap {
+  width: 750px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row-columns-1 .entry-item-post .entry-item-excerpt {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.row-columns-1 .entry-item-post .entry-more-btn {
+  padding: 16px 60px;
+}
+
+.letter-stylized {
+  display: block;
+  position: absolute;
+  font-size: 9rem;
+  font-weight: var(--ignition-font-weight-bold);
+  line-height: 1;
+  top: -20px;
+  left: -60px;
+  opacity: .105;
+  z-index: -1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Single post
+========================================= */
+
+.single .entry-header {
+  text-align: center;
+}
+
+.single .entry-header .entry-title {
+  font-size: 48px;
+}
+
+.single .entry-header .entry-meta {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.entry-section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Overlay items
+========================================= */
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) {
+  position: relative;
+  color: var(--ignition-colors-white);
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media)::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  padding: 30px;
+  background-color: rgba(35, 35, 35, 0.5);
+  pointer-events: none;
+  z-index: 2;
+  opacity: .5;
+  transition: opacity .18s ease;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover::before {
+  opacity: 1;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .woocommerce-loop-product__title,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .woocommerce-loop-product__link,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .price,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-title,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt {
+  color: var(--ignition-colors-white);
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 45px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-content a {
+  color: currentColor;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) img,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .price,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-thumb,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-thumb,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt {
+  margin-bottom: 0;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-thumb,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-thumb {
+  line-height: 0;
+}
+
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .button,
+.is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .btn-entry-more {
+  margin-top: 20px;
+  transition: opacity .18s ease;
+  opacity: 0;
+}
+
+/* -----------------------------------------
+ Comments
+----------------------------------------- */
+
+.comment-reply-title,
+.comments-title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.logged-in-as,
+.comment-notes {
+  text-align: center;
+}
+
+.comment-form-cookies-consent [type="checkbox"] {
+  margin-top: 0;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-submit .submit {
+  padding: 16px 60px;
+}
+
+.comment-reply-link {
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 6px 18px;
+  text-transform: uppercase;
+  letter-spacing: var(--ignition-milos-letter-spacing-base);
+}
+
+.comment-author .avatar {
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* Tags
+=================================== */
+
+.tag-cloud-link {
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Ignition Items
+=================================== */
+
+.ignition-widget-item-title a {
+  color: currentColor;
+}
+
+.ignition-widget-item-subtitle {
+  font-size: 14px;
+}
+
+/* Ignition Buttons
+=================================== */
+
+.ignition-item-btn.btn {
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 40px;
+}
+
+.ignition-item-btn-title {
+  font-size: 15px;
+}
+
+/* -----------------------------------------
+  WordPress Blocks general styles
+----------------------------------------- */
+
+/* Latest Posts block
+=================================== */
+
+.wp-block-latest-posts .wp-block-latest-posts__featured-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Image block
+=================================== */
+
+.wp-block-image img {
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-image.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+[class*="wp-image"] {
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Gallery block
+=================================== */
+
+.wp-block-gallery.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-gallery.is-style-ignition-milos-border-image .blocks-gallery-item__caption {
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+}
+
+/* Media & Text block
+=================================== */
+
+.wp-block-media-text.is-style-ignition-milos-border-image .wp-block-media-text__media {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-media-text.is-style-ignition-milos-border-image.is-image-fill .wp-block-media-text__media {
+  position: relative;
+  box-shadow: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.wp-block-media-text.is-style-ignition-milos-border-image.is-image-fill .wp-block-media-text__media::before {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+  background: none;
+  border: 10px solid var(--ignition-colors-white);
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cover block
+=================================== */
+
+.wp-block-cover.is-style-ignition-milos-border-image::after {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+  background: none;
+  border: 10px solid var(--ignition-colors-white);
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Video block
+=================================== */
+
+.wp-block-video.is-style-ignition-milos-border-image video {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Embeds block (Needs custom class)
+=================================== */
+
+.wp-block-embed.is-style-ignition-milos-border-image iframe {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Pullquote block
+=================================== */
+
+.wp-block-pullquote.is-style-solid-color {
+  font-size: 1rem;
+  line-height: 1.33;
+  position: relative;
+  padding: 30px 30px 30px 80px;
+  border: 0;
+  border-radius: var(--ignition-border-radius);
+}
+
+.wp-block-pullquote.is-style-solid-color::before {
+  content: "\00201C";
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 30px;
+  top: 57px;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+  margin: 0;
+  max-width: 100%;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote p {
+  font-size: 1rem;
+  line-height: 1.56;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote cite {
+  font-size: .875rem;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+/* Quote block
+=================================== */
+
+.wp-block-quote {
+  font-size: 1rem;
+  line-height: 1.33;
+  position: relative;
+  padding: 30px 30px 30px 80px;
+  border: 0;
+  background-color: var(--ignition-colors-grey);
+  border-color: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-quote::before {
+  content: "\00201C";
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 30px;
+  top: 57px;
+}
+
+.wp-block-quote p {
+  font-size: 1rem;
+  line-height: 1.56;
+  font-weight: var(--ignition-font-weight-normal);
+}
+
+.wp-block-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.wp-block-quote cite {
+  font-size: .875rem;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+.wp-block-quote.is-style-large {
+  padding: 30px 30px 30px 80px;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 20px;
+}
+
+.wp-block-quote.has-text-align-center {
+  padding: 30px;
+}
+
+.wp-block-quote.has-text-align-center::before {
+  display: block;
+  position: static;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.wp-block-quote.has-text-align-right {
+  padding: 30px 80px 30px 30px;
+}
+
+.wp-block-quote.has-text-align-right::before {
+  left: auto;
+  right: 30px;
+  top: 30px;
+  transform: rotate(180deg);
+}
+
+/* Table block
+=================================== */
+
+.wp-block-table.is-style-ignition-milos-table {
+  border: 0;
+}
+
+.wp-block-table.is-style-ignition-milos-table thead {
+  color: var(--ignition-colors-white);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead th:first-child {
+  border-top-left-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead th:last-child {
+  border-top-right-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-table.is-style-ignition-milos-table tbody tr:nth-child(odd) {
+  background: none;
+}
+
+.wp-block-table.is-style-ignition-milos-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.wp-block-table.is-style-ignition-milos-table .has-background thead {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.wp-block-table.is-style-ignition-milos-table .has-background tfoot {
+  background: none;
+}
+
+.wp-block-table.is-style-ignition-milos-table .has-background tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* -----------------------------------------
+  Gutenbee Plugin Blocks
+----------------------------------------- */
+
+/* Paragraph Block
+=================================== */
+
+.has-drop-cap:not(:focus)::first-letter {
+  padding: 0 .55rem 0 0;
+  font-size: 4rem;
+  line-height: .9;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+.is-style-ignition-milos-letter-stylized {
+  position: relative;
+}
+
+/* Image block
+=================================== */
+
+.wp-block-gutenbee-image.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Image Box block
+=================================== */
+
+.wp-block-gutenbee-imagebox.is-style-ignition-milos-border-image img {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Gallery block
+=================================== */
+
+.wp-block-gutenbee-justified-gallery.is-style-ignition-milos-border-image {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Video block
+=================================== */
+
+.wp-block-gutenbee-video.is-style-ignition-milos-border-image video {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* Slideshow block
+=================================== */
+
+.wp-block-gutenbee-slideshow.is-style-ignition-milos-border-image {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+.wp-block-gutenbee-slideshow.is-style-ignition-milos-border-image button.slick-prev {
+  left: 10px;
+}
+
+.wp-block-gutenbee-slideshow.is-style-ignition-milos-border-image button.slick-next {
+  right: 10px;
+}
+
+.wp-block-gutenbee-slideshow.is-style-ignition-milos-border-image .slick-dots {
+  bottom: 15px;
+}
+
+/* Maps block
+=================================== */
+
+.wp-block-gutenbee-google-maps.is-style-ignition-milos-border-image {
+  padding: 15px;
+  background-color: var(--ignition-body-background-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--ignition-milos-border-radius-base);
+}
+
+/* -----------------------------------------
+ Footer
+----------------------------------------- */
+
+.footer-info {
+  border-top: 1px solid;
+  font-size: 13px;
+}
+
+/* -----------------------------------------
+	Theme editor palette colors
+----------------------------------------- */
+
+:root .has-theme-primary-color {
+  color: #00a9ef;
+}
+
+:root .has-theme-primary-background-color {
+  background-color: #00a9ef;
+}
+
+:root .has-theme-dark-gray-color {
+  color: #444444;
+}
+
+:root .has-theme-dark-gray-background-color {
+  background-color: #444444;
+}
+
+:root .has-theme-medium-gray-color {
+  color: #888888;
+}
+
+:root .has-theme-medium-gray-background-color {
+  background-color: #888888;
+}
+
+:root .has-theme-light-gray-color {
+  color: #ebebeb;
+}
+
+:root .has-theme-light-gray-background-color {
+  background-color: #ebebeb;
+}
+
+:root .has-theme-white-color {
+  color: #ffffff;
+}
+
+:root .has-theme-white-background-color {
+  background-color: #ffffff;
+}
+
+:root .has-theme-black-color {
+  color: #000000;
+}
+
+:root .has-theme-black-background-color {
+  background-color: #000000;
+}
+
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+
+.entry-meta a,
+.ignition-widget-item-title a:hover {
+  color: var(--ignition-primary-color);
+}
+
+.wp-block-table.is-style-ignition-milos-table thead,
+.mobile-nav-trigger,
+.navigation-main .nav-button > a {
+  background-color: var(--ignition-primary-color);
+}
+
+.navigation-main .nav-button > a {
+  border-color: var(--ignition-primary-color);
+}
+
+/* Global - Primary Text Color
+========================================= */
+
+/* Global - Secondary Text Color
+========================================= */
+
+.page-subtitle,
+.entry-item-excerpt,
+.ignition-widget-item-subtitle,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date {
+  color: var(--ignition-secondary-text-color);
+}
+
+/* Footer - Border Color
+========================================= */
+
+.footer {
+  border-top: 1px solid var(--ignition-footer-border-color);
+}
+
+@media (min-width: 992px) {
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-title {
+    font-size: 24px;
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-title,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt {
+    transform: translateY(100%);
+    transition: transform .18s ease;
+    margin: 0;
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .btn-entry-more {
+    opacity: 0;
+    color: var(--ignition-button-text-color);
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-item-title,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-item-title,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-meta {
+    transform: translateY(0);
+  }
+
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):hover .btn-entry-more,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-meta,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .entry-item-excerpt,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media):focus .btn-entry-more {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .button,
+  .is-style-ignition-milos-item-overlay .entry-item:not(.entry-item-media) .btn-entry-more {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .wp-block-table thead {
+    display: none;
+  }
+
+  .wp-block-table tbody tr {
+    padding: 10px 15px;
+    display: block;
+    margin-top: -1px;
+  }
+
+  .wp-block-table tbody td {
+    display: block;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .wp-block-table tbody td:first-child {
+    font-size: 16px;
+    font-weight: var(--ignition-font-weight-bold);
+    padding: 0 0 5px;
+  }
+
+  .wp-block-table tbody .td-label {
+    display: inline-block;
+    margin-right: 3px;
+    font-weight: var(--ignition-font-weight-bold);
+    opacity: .8;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-hero-content {
+    text-align: center;
+  }
+
+  .page-hero-content .woocommerce-breadcrumb {
+    justify-content: center;
+  }
+}

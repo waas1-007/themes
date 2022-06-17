@@ -1,0 +1,25 @@
+/* -----------------------------------------
+	Theme editor palette colors
+----------------------------------------- */
+$editor-palette: (
+	theme-primary: #132739, // Primary color
+	theme-secondary: #34a4c6, // Secondary color
+	theme-dark-gray: #212121, // Text color
+	theme-medium-gray: #757575, // Text color light
+	theme-light-gray: #dddddd, // Border color
+	theme-gray: #f5f8fa,
+	theme-white: #ffffff,
+	theme-black: #000000,
+) !default;
+
+:root {
+	@each $name, $value in $editor-palette {
+		.has-#{$name}-color {
+			color: $value;
+		}
+
+		.has-#{$name}-background-color {
+			background-color: $value;
+		}
+	}
+}

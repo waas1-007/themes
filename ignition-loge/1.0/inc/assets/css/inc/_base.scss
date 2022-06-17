@@ -1,0 +1,82 @@
+/* -----------------------------------------
+ Base theme styles
+----------------------------------------- */
+
+/* Main
+========================================= */
+.main {
+	padding: 80px 0 90px;
+
+	@include media-breakpoint-down(md) {
+		padding: 60px 0;
+	}
+}
+
+.content-background-wrapper {
+	position: relative;
+	padding-bottom: var(--ignition-loge-section-padding);
+}
+
+.content-wrapper {
+	padding: var(--ignition-loge-section-padding) 0 0;
+}
+
+.background-provider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: var(--ignition-colors-grey);
+	width: calc(50% + (1140px * .33) - (30px * 3));
+	z-index: -1;
+
+	.without-thumbnail & {
+		width: calc(100% - (100% - 1140px)/2);
+	}
+
+	&.background-provider-left {
+		right: auto;
+		left: 0;
+	}
+
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
+}
+
+/* Content utilities
+========================================= */
+.ml-auto {
+	margin-left: auto;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Buttons
+========================================= */
+.btn,
+.button,
+.gutenbee-block-button-link,
+.wp-block-button__link,
+.added_to_cart,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"] {
+	padding: 10px 28px 16px 0;
+	text-transform: uppercase;
+	border-radius: 0;
+	line-height: normal;
+	border: 0;
+	min-width: 80px;
+	border-bottom: 3px solid;
+	text-align: left;
+}
+
+.is-style-outline > .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+	padding: 13px 24px;
+	color: var(--ignition-buttons-text-color);
+}

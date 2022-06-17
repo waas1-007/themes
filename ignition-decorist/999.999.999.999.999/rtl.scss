@@ -1,0 +1,251 @@
+@import 'inc/assets/css/inc/mixins/breakpoints';
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.has-sidebar {
+	&:not(.layout-reverse) {
+		> [class^="col"] {
+			&:first-child {
+				@include media-breakpoint-up(xl) {
+					padding-right: $grid-gutter-width-base / 2;
+					padding-left: $grid-gutter-width-base / 2;
+				}
+			}
+		}
+	}
+
+	&.layout-reverse {
+		> [class^="col"] {
+			&:first-child {
+				@include media-breakpoint-up(xl) {
+					padding-left: $grid-gutter-width-base / 2;
+					padding-right: $grid-gutter-width-base / 2;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.navigation-main {
+	li[class*=ignition-icons-]::before {
+		margin-right: 0;
+		margin-left: 7px;
+	}
+
+	// Offset menu items to the far end
+	> .menu-item-pull {
+		@include media-breakpoint-up(xl) {
+			margin-left: 0 !important;
+			margin-right: auto !important;
+		}
+	}
+}
+
+.head-content-slot-mobile-nav {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.navigation-mobile {
+	li[class*=ignition-icons-]::before {
+		left: auto;
+		right: 0;
+	}
+}
+
+.navigation-mobile-dismiss {
+	&::after {
+		margin-left: 0;
+		margin-right: 7px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Shortcodes
+--------------------------------------------------------------*/
+
+/* Search bar
+========================================= */
+.category-search-select {
+	background-position: 5% 50%;
+	border-radius: 0 var(--ignition-theme-border-radius-base) var(--ignition-theme-border-radius-base) 0;
+	border-left: 0;
+	border-right: 1px solid;
+}
+
+.category-search-input-wrap {
+	.category-search-input {
+		border-radius: 0;
+	}
+}
+
+.category-search-spinner {
+	right: auto;
+	left: 10px;
+}
+
+.category-search-results-item-thumb {
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+button.category-search-btn {
+	border-radius: var(--ignition-theme-border-radius-base) 0 0 var(--ignition-theme-border-radius-base);
+}
+
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+.entry-item-content,
+.entry-item-media {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+.ignition-slideshow-actions-wrap {
+	right: auto;
+	left: 0;
+
+	@include media-breakpoint-up(xl) {
+		right: auto;
+		left: 15px;
+	}
+
+	@include media-breakpoint-down(xs) {
+		right: auto;
+		left: 15px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget-title {
+	border-left: 0;
+	padding-left: 0;
+	border-right-width: 3px;
+	border-right-style: solid;
+	padding-right: 10px;
+}
+
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_nav_menu,
+.widget_product_categories,
+.widget_layered_nav,
+.widget_rating_filter,
+.wp-block-woocommerce-product-categories {
+	li {
+		> span,
+		> .count,
+		> .ci-count {
+			right: auto;
+			left: 0;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+
+/* Post Types - Slideshow style
+========================================= */
+.is-style-ignition-decorist-post-types-slideshow {
+	position: relative;
+
+	.slick-arrow {
+		top: 2px;
+		left: 15px;
+		right: auto;
+		transform: translateY(calc(-100% - 35px));
+		margin-left: 0;
+	}
+
+	.slick-next {
+		margin-left: 0;
+		margin-right: 10px;
+		transform: translate(calc(100% + 5px), calc(-100% - 35px));
+	}
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# WooCommerce Specific
+--------------------------------------------------------------*/
+.header-mini-cart-trigger-text .woocommerce-Price-amount {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.shop-filter-toggle .ignition-icons {
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+.shop-actions {
+	&.shop-actions-no-filter,
+	&.with-sidebar {
+		.woocommerce-result-count {
+			@include media-breakpoint-up(md) {
+				text-align: right;
+			}
+		}
+	}
+}
+
+li.product,
+.entry-item-product {
+	text-align: right;
+
+	.added_to_cart {
+		@include media-breakpoint-down(xs) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.button,
+	.add_to_cart_button {
+		margin: 0 20px 20px 5px;
+
+		@include media-breakpoint-down(xs) {
+			margin: 0 10px 10px 5px;
+		}
+	}
+
+	.entry-item-content {
+		text-align: right;
+
+		.added_to_cart {
+			margin-left: 0;
+			margin-right: 10px;
+		}
+
+		@include media-breakpoint-down(xs) {
+			.added_to_cart {
+				margin-right: 15px;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+li.wc-block-grid__product {
+	text-align: right;
+}

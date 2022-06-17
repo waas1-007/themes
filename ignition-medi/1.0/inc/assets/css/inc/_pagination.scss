@@ -1,0 +1,21 @@
+/* -----------------------------------------
+ Pagination
+----------------------------------------- */
+
+.navigation,
+.woocommerce-pagination {
+	a,
+	.page-numbers {
+		padding: 8px 18px;
+		font-size: 14px !important;
+		border-radius: var(--ignition-medi-border-radius-base);
+	}
+}
+
+.page-links {
+	.page-number {
+		padding: 8px 18px;
+		font-size: 14px !important;
+		border-radius: var(--ignition-medi-border-radius-base);
+	}
+}

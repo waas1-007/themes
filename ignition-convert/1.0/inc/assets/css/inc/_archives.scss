@@ -1,0 +1,167 @@
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+.entry-header {
+	border-bottom: 1px solid;
+	padding-bottom: 15px;
+}
+
+.entry-item-content {
+	text-align: left;
+}
+
+.entry-item-title,
+.entry-title {
+	a {
+		color: currentColor;
+	}
+}
+
+.entry-item-title {
+	+ .entry-item-excerpt {
+		margin-top: -30px;
+	}
+}
+
+.entry-item-excerpt {
+	font-size: 15px;
+}
+
+.entry-thumb,
+.entry-item-thumb {
+	img {
+		border-radius: var(--ignition-convert-border-radius-base);
+	}
+}
+
+.entry-meta {
+	font-size: 14px;
+}
+
+.comment-notes,
+.form-allowed-tags,
+.entry-author-desc {
+	font-size: inherit;
+}
+
+.entry-item-title {
+	+ .entry-item-excerpt {
+		margin-top: -20px;
+	}
+
+	+ .entry-meta {
+		margin: -20px 0 30px;
+	}
+}
+
+/* Overlay item styles
+=================================== */
+.is-style-ignition-convert-item-overlay {
+	.entry-item:not(.entry-item-media) {
+		position: relative;
+		text-align: left;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			border-radius: var(--ignition-convert-border-radius-base);
+			z-index: 2;
+			opacity: .5;
+			transition: opacity .18s ease;
+		}
+
+		&:hover {
+			&::before {
+				opacity: .8;
+			}
+		}
+
+		.woocommerce-loop-product__title,
+		.woocommerce-loop-product__link,
+		.price,
+		.entry-meta,
+		.entry-item-title,
+		.entry-item-excerpt {
+			color: var(--ignition-colors-white);
+		}
+
+		.entry-item-content {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 30px;
+			color: var(--ignition-colors-white);
+			z-index: 3;
+			text-align: left;
+
+			a {
+				color: currentColor;
+			}
+		}
+
+		img,
+		.price,
+		.entry-item-thumb,
+		.entry-thumb,
+		.entry-meta,
+		.entry-item-excerpt {
+			margin-bottom: 0;
+		}
+
+		.entry-item-thumb,
+		.entry-thumb {
+			line-height: 0;
+		}
+
+		.button,
+		.btn-entry-more {
+			display: none;
+		}
+	}
+}
+
+/* Single custom post meta
+=================================== */
+.entry-list-meta {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 30px;
+	padding: 20px;
+	list-style: none;
+	border-radius: var(--ignition-convert-border-radius-base);
+	color: var(--ignition-colors-white);
+
+	@include media-breakpoint-down(sm) {
+		flex-wrap: wrap;
+		padding: 10px;
+	}
+}
+
+.entry-list-meta-item {
+	padding: 10px;
+	width: 33.3333%;
+
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
+}
+
+.entry-list-meta-label {
+	display: block;
+	font-size: 10px;
+	font-weight: var(--ignition-font-weight-bold);
+	text-transform: uppercase;
+	letter-spacing: 2.9px;
+}
+
+.entry-list-meta-value {
+	display: block;
+	font-size: 16px;
+	line-height: 1.4em;
+}

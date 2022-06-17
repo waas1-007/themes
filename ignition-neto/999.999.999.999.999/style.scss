@@ -1,0 +1,40 @@
+/*!
+Theme Name: Neto - Ignition
+Theme URI: https://www.cssigniter.com/themes/neto/
+Author: CSSIgniter
+Author URI: https://www.cssigniter.com/
+Description: An Ecommerce Theme for WordPress
+Version: 1.0.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ignition-neto
+RequiresIgnition: 2.0.0
+*/
+
+/* -----------------------------------------
+	Table of Contents
+--------------------------------------------
+
+.. General / Base
+.. Main Navigation
+.. Header
+.. Archives
+.. Blocks
+.. Widgets
+.. Pagination
+.. Footer
+.. Editor Palette
+.. Theme Colors
+*/
+
+@import "inc/assets/css/inc/mixins/breakpoints";
+@import "inc/assets/css/inc/base";
+@import "inc/assets/css/inc/navigation";
+@import "inc/assets/css/inc/header";
+@import "inc/assets/css/inc/archives";
+@import "inc/assets/css/inc/blocks";
+@import "inc/assets/css/inc/widgets";
+@import "inc/assets/css/inc/pagination";
+@import "inc/assets/css/inc/footer";
+@import "inc/assets/css/inc/editor-palette";
+@import "inc/assets/css/inc/colors";

@@ -1,0 +1,281 @@
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Body Background Color
+========================================= */
+.category-search-results {
+	background-color: var(--ignition-body-background-color);
+}
+
+/* Global - Primary Color
+========================================= */
+.navigation a.current,
+.woocommerce-pagination a.current,
+.navigation .page-numbers.current,
+.woocommerce-pagination .page-numbers.current,
+.section-pre-main .ignition-breadcrumbs a:hover,
+.widget_meta li a:hover,
+.widget_pages li a:hover,
+.widget_categories li a:hover,
+.widget_archive li a:hover,
+.widget_nav_menu li a:hover,
+.widget_product_categories li a:hover,
+.widget_layered_nav li a:hover,
+.widget_rating_filter li a:hover,
+.widget_ignition-page-children-menu li a:hover,
+.wp-block-woocommerce-product-categories li a:hover,
+.ignition-widget-item .ignition-widget-item-title a:hover {
+	color: var(--ignition-primary-color);
+}
+
+.is-style-ignition-nozama-post-types-slideshow .slick-arrow:hover {
+	border-color: var(--ignition-primary-color);
+}
+
+.is-style-ignition-nozama-post-types-slideshow .slick-arrow:hover {
+	background-color: var(--ignition-primary-color);
+}
+
+/* Global - Secondary Color
+========================================= */
+a,
+.site-tagline {
+	color: var(--ignition-secondary-color);
+}
+
+.category-search-spinner {
+	border-color: rgba(#000, .2);
+	border-top-color: var(--ignition-secondary-color);
+}
+
+/* Global - Text Color
+========================================= */
+.entry-meta a,
+.is-style-ignition-nozama-post-types-slideshow .slick-arrow,
+.category-search-select,
+.category-search-results-item a,
+.section-pre-main a,
+.widget_meta li a,
+.widget_pages li a,
+.widget_categories li a,
+.widget_archive li a,
+.widget_nav_menu li a,
+.widget_product_categories li a,
+.widget_layered_nav li a,
+.widget_rating_filter li a,
+.widget_ignition-page-children-menu li a,
+.wp-block-woocommerce-product-categories li a {
+	color: var(--ignition-text-color);
+}
+
+/* Global - Secondary Text Color
+========================================= */
+.entry-meta,
+.entry-item-excerpt,
+blockquote cite,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date,
+.wp-block-quote cite,
+.section-pre-main .ignition-breadcrumbs {
+	color: var(--ignition-secondary-text-color);
+}
+
+/* Global - Border Color
+========================================= */
+.entry-item,
+.is-style-ignition-nozama-post-types-slideshow .slick-arrow,
+.widget_meta li a,
+.widget_pages li a,
+.widget_categories li a,
+.widget_archive li a,
+.widget_nav_menu li a,
+.widget_product_categories li a,
+.widget_layered_nav li a,
+.widget_rating_filter li a,
+.widget_ignition-page-children-menu li a,
+.wp-block-woocommerce-product-categories li a {
+	border-color: var(--ignition-border-color);
+}
+
+/* Top Bar / Default Colors
+========================================= */
+.header-normal .head-intro {
+	border-bottom-color: var(--ignition-top-bar-border-color);
+}
+
+/* Top Bar / Transparent Colors
+========================================= */
+.header-fixed .head-intro {
+	border-bottom-color: var(--ignition-top-bar-transparent-border-color);
+}
+
+/* Header / Default Colors
+========================================= */
+.header-normal {
+	.head-mast-navigation {
+		color: var(--ignition-header-text-color);
+		border-bottom: 1px solid var(--ignition-header-border-color);
+
+		.navigation-main ul {
+			background-color: var(--ignition-header-submenu-background-color);
+			color: var(--ignition-header-submenu-text-color);
+		}
+
+		.navigation-main > li > ul::before {
+			border-bottom-color: var(--ignition-header-submenu-background-color);
+		}
+
+		.navigation-main li {
+			li:hover > a,
+			li > a:focus,
+			.current-menu-item > a,
+			.current-menu-parent > a,
+			.current-menu-ancestor > a,
+			.current_page_item > a,
+			.current_page_ancestor > a {
+				color: var(--ignition-header-submenu-text-color-hover, var(--ignition-primary-color));
+				background-color: var(--ignition-header-submenu-background-color-hover);
+			}
+		}
+	}
+
+	.mobile-nav-trigger,
+	.head-mast-inner .head-content-slot-item {
+		border-color: var(--ignition-header-border-color);
+	}
+}
+
+/* Header / Transparent Colors
+========================================= */
+.header-fixed {
+	.head-mast-navigation {
+		color: var(--ignition-header-transparent-text-color);
+		border-bottom: 1px solid var(--ignition-header-transparent-border-color);
+
+		.navigation-main ul {
+			background-color: var(--ignition-header-transparent-submenu-bg-color);
+			color: var(--ignition-header-transparent-submenu-text-color);
+		}
+
+		.navigation-main li {
+			li:hover > a,
+			li > a:focus,
+			.current-menu-item > a,
+			.current-menu-parent > a,
+			.current-menu-ancestor > a,
+			.current_page_item > a,
+			.current_page_ancestor > a {
+				color: var(--ignition-header-transparent-submenu-text-color-hover, var(--ignition-primary-color));
+				background-color: var(--ignition-header-transparent-submenu-bg-color-hover);
+			}
+		}
+	}
+
+	.mobile-nav-trigger,
+	.head-mast-inner .head-content-slot-item {
+		border-color: var(--ignition-header-transparent-border-color);
+	}
+}
+
+/* Header / Sticky Colors
+========================================= */
+.head-mast.sticky-fixed,
+.head-mast-navigation.sticky-fixed {
+	background-color: var(--ignition-header-sticky-background-color);
+	color: var(--ignition-header-sticky-text-color);
+	border-bottom: 1px solid var(--ignition-header-sticky-border-color);
+
+	.navigation-main ul {
+		background-color: var(--ignition-header-sticky-submenu-background-color);
+		color: var(--ignition-header-sticky-submenu-text-color);
+	}
+
+	.navigation-main > li > ul::before {
+		border-bottom-color: var(--ignition-header-sticky-submenu-background-color);
+	}
+
+	.navigation-main li {
+		li:hover > a,
+		li > a:focus,
+		.current-menu-item > a,
+		.current-menu-parent > a,
+		.current-menu-ancestor > a,
+		.current_page_item > a,
+		.current_page_ancestor > a {
+			color: var(--ignition-header-sticky-submenu-text-color-hover, var(--ignition-primary-color));
+			background-color: var(--ignition-header-sticky-submenu-background-color-hover);
+		}
+	}
+
+	.mobile-nav-trigger,
+	.head-mast-inner .head-content-slot-item {
+		border-color: var(--ignition-header-sticky-border-color);
+	}
+
+	&::before {
+		background-color: var(--ignition-header-sticky-overlay-background-color);
+	}
+}
+
+/* General Navigation
+========================================= */
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a,
+.navigation a:hover,
+.navigation .page-numbers.current,
+.navigation-main .menu-item-has-children > a::after,
+.navigation-main .page_item_has_children > a::after,
+.navigation-main li[class*=ignition-icons-]::before,
+.navigation-mobile li[class*=ignition-icons-]::before {
+	color: var(--ignition-primary-color);
+}
+
+.header-mini-cart-trigger {
+	&:hover {
+		color: inherit;
+	}
+}
+
+/* Footer
+========================================= */
+.footer-widgets .widget_meta li a,
+.footer-widgets .widget_pages li a,
+.footer-widgets .widget_categories li a,
+.footer-widgets .widget_archive li a,
+.footer-widgets .widget_nav_menu li a,
+.footer-widgets .widget_product_categories li a,
+.footer-widgets .widget_layered_nav li a,
+.footer-widgets .widget_rating_filter li a,
+.footer-widgets .widget_ignition-page-children-menu li a,
+.footer-widgets .wp-block-woocommerce-product-categories li a {
+	color: var(--ignition-footer-text-color);
+	border-bottom-color: var(--ignition-footer-border-color);
+
+	&:hover {
+		color: var(--ignition-primary-color);
+	}
+}
+
+.footer-widgets .widget-title,
+.footer-widgets .ignition-widget-item {
+	border-color: var(--ignition-footer-border-color);
+}

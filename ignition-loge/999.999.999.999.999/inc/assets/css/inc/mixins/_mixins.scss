@@ -1,0 +1,10 @@
+@mixin theme-title {
+	&::after {
+		content: "";
+		display: block;
+		width: 15px;
+		margin: 10px 0;
+		height: 1px;
+		background-color: currentColor;
+	}
+}

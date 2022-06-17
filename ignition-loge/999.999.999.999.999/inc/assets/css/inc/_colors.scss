@@ -1,0 +1,90 @@
+/* -----------------------------------------
+ Theme color overrides
+----------------------------------------- */
+
+/* Global - Primary Color
+========================================= */
+.navigation-main > li:hover > a,
+.navigation-main > li > a:focus,
+.navigation-main > .current-menu-item > a,
+.navigation-main > .current-menu-parent > a,
+.navigation-main > .current-menu-ancestor > a,
+.navigation-main > .current_page_item > a,
+.navigation-main > .current_page_ancestor > a {
+	color: currentColor;
+
+	&::before {
+		border-bottom-color: var(--ignition-primary-color);
+	}
+}
+
+.wp-block-testimonial-content-wrapper::before,
+.wp-block-quote::before,
+.ignition-widget-item-title a:hover,
+.footer .ignition-widget-item-title a:hover {
+	color: var(--ignition-primary-color);
+}
+
+.ci-item-filter.filter-active {
+	background-color: var(--ignition-primary-color);
+}
+
+.ci-item-filter.filter-active {
+	border-color: var(--ignition-primary-color);
+}
+
+/* Global - Border Color
+========================================= */
+.entry-section-social-share {
+	border-color: var(--ignition-border-color);
+}
+
+/* Global - Text Color
+========================================= */
+.entry-meta a {
+	color: var(--ignition-text-color);
+}
+
+/* Global - Secondary Text Color
+========================================= */
+.entry-meta,
+.entry-item-excerpt,
+blockquote cite,
+.ignition-widget-item-subtitle,
+.entry-item-product .price,
+li.wc-block-grid__product .wc-block-grid__product-price,
+li.product .price,
+[class^="wp-block"] > figcaption,
+.wp-block-image figcaption,
+.wp-block-gutenbee-image figcaption,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-posts .wp-block-latest-posts__post-author,
+.wp-block-latest-posts .wp-block-latest-posts__post-date,
+.contact-form label > span,
+.comment-metadata,
+.form-allowed-tags,
+.comment-notes,
+.widget .rss-date,
+.widget .post-date,
+.wp-block-quote cite {
+	color: var(--ignition-secondary-text-color);
+}
+
+/* Buttons
+========================================= */
+.wp-block-button.is-style-outline .wp-block-button__link:not([class*=has-]) {
+	color: var(--ignition-buttons-text-color);
+}
+
+/* Footer - Text Color
+========================================= */
+.footer .ignition-widget-item-title a,
+.footer .ignition-widget-item-subtitle {
+	color: var(--ignition-footer-text-color);
+}
+
+/* Footer - Border Color
+========================================= */
+.footer-widgets {
+	border-color: var(--ignition-footer-border-color);
+}

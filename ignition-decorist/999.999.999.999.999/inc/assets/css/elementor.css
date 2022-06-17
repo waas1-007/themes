@@ -1,0 +1,11 @@
+/* -----------------------------------------
+	Elementor Styling
+----------------------------------------- */
+
+.elementor-widget-ci_post_types .product .entry-item-thumb {
+  margin-bottom: 0 !important;
+}
+
+.elementor-widget-ci_post_types .product .entry-item-thumb img {
+  margin-bottom: 0;
+}

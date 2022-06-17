@@ -1,0 +1,103 @@
+/* -----------------------------------------
+	Navigation
+----------------------------------------- */
+
+/* Main Navigation
+========================================= */
+.navigation-main {
+	display: flex;
+	align-items: center;
+
+	// Sub-menu containers
+	ul {
+		padding: 20px 15px;
+		min-width: 220px;
+		box-shadow: 0 0 24px rgba(#000, .08);
+		border-radius: var(--ignition-theme-border-radius-base);
+	}
+
+	// First Level Menu Links
+	// -----------------------------------
+	// Default Styles
+	> li > a {
+		padding: 19px 0;
+		margin: 0 12px;
+		position: relative;
+		color: currentColor;
+
+		&::before {
+			content: "";
+			border-bottom: 3px solid transparent;
+			transition: border-color .18s ease;
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+
+	// Sub-Menu Links
+	// -----------------------------------
+
+	// Default Styles
+	li li a {
+		padding: 6px 15px;
+	}
+
+	// Nav button
+	// -----------------------------------
+
+	.nav-button {
+		> a {
+			border-width: 1px;
+			box-shadow: var(--ignition-theme-box-shadow-base);
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	// First menu item display
+	> .menu-item-first {
+		@include media-breakpoint-up(xl) {
+			width: 210px;
+		}
+	}
+
+	// Offset menu items to the far end
+	> .menu-item-pull {
+		@include media-breakpoint-up(xl) {
+			margin-left: auto !important;
+		}
+	}
+}
+
+/* Mobile Navigation
+========================================= */
+.navigation-mobile-wrap {
+	font-weight: var(--ignition-font-weight-bold);
+}
+
+.head-content-slot-mobile-nav {
+	flex: none;
+	margin-right: 10px;
+}
+
+.mobile-nav-trigger {
+	font-weight: var(--ignition-font-weight-normal);
+	margin: 0;
+	color: currentColor;
+	border-radius: var(--ignition-theme-border-radius-base);
+	box-shadow: var(--ignition-theme-box-shadow-base);
+	height: 52px;
+	width: 52px;
+	padding: 0 12px;
+	border: 1px solid;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: normal;
+	flex: none;
+}

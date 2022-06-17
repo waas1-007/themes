@@ -1,0 +1,76 @@
+@import 'inc/assets/css/inc/mixins/breakpoints';
+
+/*--------------------------------------------------------------
+# Base / Layout
+--------------------------------------------------------------*/
+.background-provider {
+	right: auto;
+	left: 0;
+
+	&.background-provider-left {
+		left: auto;
+		right: 0;
+	}
+
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
+}
+
+.btn,
+.button,
+.gutenbee-block-button-link,
+.wp-block-button__link,
+.added_to_cart,
+input[type="submit"],
+input[type="reset"],
+button[type="submit"] {
+	padding-right: 0;
+	padding-left: 28px;
+	text-align: right;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.page-title-align-left {
+	text-align: right;
+}
+
+.page-title-align-right {
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+.entry-item-content {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Specific
+--------------------------------------------------------------*/
+li.wc-block-grid__product .wc-block-grid__product-title::before,
+.entry-item-product .woocommerce-loop-category__title::before,
+.entry-item-product .woocommerce-loop-product__title::before,
+li.product .woocommerce-loop-category__title::before,
+li.product .woocommerce-loop-product__title::before {
+	left: auto;
+	right: 50%;
+}
+
+.wc-tabs li.active a {
+	padding: 0 0 16px 28px;
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__contents .coupon [type=submit] {
+	left: 0;
+	right: auto;
+}
+
+.place-order [type=submit],
+.cart_totals .checkout-button {
+	padding: 10px 0 16px 28px;
+}

@@ -1,0 +1,33 @@
+/* -----------------------------------------
+	Forms Styling
+----------------------------------------- */
+label,
+.label {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: var(--ignition-font-weight-normal);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="time"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+	border-radius: var(--ignition-loge-border-radius-base);
+}
+
+.select2-container.select2-container--default,
+.select2-container.select2-container--default {
+	.select2-selection--multiple,
+	.select2-selection--single {
+		border-radius: var(--ignition-loge-border-radius-base);
+	}
+}

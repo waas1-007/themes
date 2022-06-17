@@ -1,0 +1,115 @@
+/* -----------------------------------------
+ Header
+----------------------------------------- */
+
+/* Top bar
+========================================= */
+.head-intro {
+	font-size: 14px;
+}
+
+/* Mast head
+========================================= */
+.head-mast {
+	font-size: 16px;
+
+	.header-normal & {
+		border-bottom: 0;
+	}
+}
+
+.head-mast-inner {
+	padding: 22px 0;
+}
+
+.head-intro {
+	font-size: 13px;
+}
+
+.head-intro-inner {
+	padding: 12px 0;
+}
+
+/* Branding
+========================================= */
+.site-logo {
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 4px;
+}
+
+.site-tagline {
+	line-height: 1.35;
+}
+
+/* Page hero
+========================================= */
+.page-hero-content {
+	@include media-breakpoint-down(xs) {
+		text-align: center;
+
+		.woocommerce-breadcrumb {
+			justify-content: center;
+		}
+	}
+
+	.page-hero-title {
+		font-size: 38px;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-hero-subtitle {
+	margin: 5px 0 0;
+	line-height: 1.45;
+}
+
+/* Page title (in content)
+========================================= */
+.page-title-wrap {
+	margin-bottom: 65px;
+}
+
+.page-title-content {
+	.page-title {
+		font-size: 38px;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-subtitle {
+	margin: 0;
+	line-height: 1.45;
+}
+
+.page-title-description,
+.page-subtitle,
+.page-hero-subtitle {
+	font-size: 16px;
+}
+
+.page-hero-content,
+.page-title-content {
+	@include media-breakpoint-up(xl) {
+		width: 50%;
+	}
+}
+
+/* Pre-main section (breadcrumbs)
+=================================== */
+.section-pre-main {
+	.ignition-breadcrumbs {
+		padding-bottom:  0;
+		border-bottom: 0;
+	}
+}

@@ -1,0 +1,27 @@
+/* -----------------------------------------
+	Base CSS Custom Properties (Variables)
+----------------------------------------- */
+
+:root {
+	// Ignition framework overrides
+	// =========================================
+	--ignition-colors-grey: #f9f9f9;
+
+	// Colors
+	// =========================================
+	--ignition-loge-accent-background-color: #f9f9f9;
+
+	// Various
+	// =========================================
+	--ignition-loge-border-radius-base: 0;
+	--ignition-loge-letter-spacing-base: .05em;
+	--ignition-loge-section-padding: 100px;
+
+	@include media-breakpoint-down(md) {
+		--ignition-loge-section-padding: 70px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		--ignition-loge-section-padding: 50px;
+	}
+}

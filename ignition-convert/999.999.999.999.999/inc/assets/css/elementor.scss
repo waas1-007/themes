@@ -1,0 +1,12 @@
+/* -----------------------------------------
+	Elementor Styling
+----------------------------------------- */
+
+.elementor-widget-ci_post_types {
+    .entry-item-thumb,
+    .entry-thumb {
+        img {
+            border-radius: var(--ignition-convert-border-radius-base);
+        }
+    }
+}

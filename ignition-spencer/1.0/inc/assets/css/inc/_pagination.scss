@@ -1,0 +1,28 @@
+/* -----------------------------------------
+ Pagination
+----------------------------------------- */
+
+.navigation,
+.woocommerce-pagination {
+	margin: 100px 0 0;
+	text-align: left;
+
+	a,
+	span.page-numbers,
+	a.page-numbers {
+		display: inline-block;
+		padding: 9px 15px;
+		font-size: 11px !important;
+		text-transform: uppercase;
+		margin-bottom: 3px;
+		background: none;
+
+		&:hover {
+			background-color: transparent;
+		}
+
+		&.current {
+			background-color: transparent;
+		}
+	}
+}

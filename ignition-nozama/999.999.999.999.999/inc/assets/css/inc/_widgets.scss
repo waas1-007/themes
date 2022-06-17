@@ -1,0 +1,108 @@
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* General
+=================================== */
+.widget {
+	@media (max-height: 768px) {
+		margin-bottom: 40px;
+	}
+}
+
+.widget-title {
+	margin-bottom: 15px;
+}
+
+.rssSummary {
+	text-transform: none;
+	font-size: 14px;
+}
+
+/* Tag Cloud Widget
+=================================== */
+.tag-cloud-link {
+	border-radius: var(--ignition-theme-border-radius-base);
+	padding: 4px 16px;
+}
+
+/* List Widgets
+=================================== */
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_nav_menu,
+.widget_product_categories,
+.widget_layered_nav,
+.widget_rating_filter,
+.widget_ignition-page-children-menu,
+.wp-block-woocommerce-product-categories {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		ul {
+			margin-left: 15px;
+		}
+	}
+
+	li {
+		line-height: normal;
+		display: block;
+		position: relative;
+		margin: 0;
+
+		a {
+			display: block;
+			padding: 10px 0;
+			margin: 0;
+			border-bottom: 1px solid transparent;
+			letter-spacing: var(--ignition-theme-letter-spacing-base);
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		> span,
+		> .count,
+		> .ci-count {
+			position: absolute;
+			right: 0;
+			top: 6px;
+			font-size: 14px;
+			padding: 4px 3px;
+		}
+	}
+}
+
+
+/* Social Icons
+=================================== */
+[id*="social"].menu {
+	a {
+		border-radius: var(--ignition-theme-border-radius-base);
+	}
+}
+
+/* Item Widget
+=================================== */
+.ignition-widget-item {
+	.ignition-widget-item-title {
+		font-weight: var(--ignition-font-weight-base);
+
+		a {
+			color: currentColor;
+		}
+	}
+
+	.ignition-widget-item-subtitle {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,92 @@
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+
+/* Main Archive Styles
+========================================= */
+.entry-item {
+	position: relative;
+	border: 1px solid transparent;
+	text-align: left;
+
+	&:hover {
+		box-shadow: var(--ignition-theme-box-shadow-base);
+	}
+
+	.entry-meta {
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+
+	.btn-entry-more {
+		padding: 5px 15px;
+		font-size: 14px;
+	}
+
+	&.entry-item-media {
+		border: 0;
+		border-radius: 0;
+
+		.entry-meta {
+			font-size: 1rem;
+		}
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+.entry-item-thumb {
+	margin-bottom: 0;
+}
+
+.entry-item-content {
+	padding: 20px 20px 15px;
+	text-align: left;
+}
+
+.entry-item-title {
+	font-size: 16px;
+	line-height: normal;
+	margin-bottom: 25px;
+	font-weight: var(--ignition-font-weight-base);
+
+	+ .entry-meta {
+		margin-top: -20px;
+	}
+}
+
+.entry-title {
+	font-size: 28px;
+}
+
+.entry-item-title,
+.entry-title {
+	a {
+		color: currentColor;
+	}
+}
+
+/* Pagination
+========================================= */
+.navigation,
+.woocommerce-pagination {
+	background-color: var(--ignition-colors-grey);
+	padding: 10px;
+
+	a,
+	.page-numbers {
+		border: 0;
+		padding: 0;
+		background: none;
+
+		&:hover {
+			background: none;
+		}
+
+		&.current {
+			background: none;
+		}
+	}
+}

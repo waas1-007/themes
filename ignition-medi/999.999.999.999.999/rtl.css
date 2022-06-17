@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+
+.entry-item-content {
+  text-align: right;
+}
+
+.is-style-ignition-medi-item-overlay .entry-item:not(.entry-item-media) .entry-item-content {
+  text-align: right;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.sidebar .widget_nav_menu .menu:not([id*=social]) li > a {
+  border-left: 0;
+  border-right-width: 3px;
+  border-right-style: solid;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Specific
+--------------------------------------------------------------*/
+
+.woocommerce-product-search button[type=submit] {
+  border-radius: var(--ignition-medi-border-radius-base) 0 0 var(--ignition-medi-border-radius-base);
+}

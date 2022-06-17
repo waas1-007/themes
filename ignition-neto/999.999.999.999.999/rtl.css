@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+
+.entry-item-content,
+.entry-item-media {
+  text-align: right;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Specific
+--------------------------------------------------------------*/
+
+.header-mini-cart-trigger-text .woocommerce-Price-amount {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.shop-filter-toggle .ignition-icons {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+li.product,
+.entry-item-product {
+  text-align: right;
+}
+
+li.product .entry-item-content,
+.entry-item-product .entry-item-content {
+  text-align: right;
+}
+
+li.product .entry-item-content .added_to_cart,
+.entry-item-product .entry-item-content .added_to_cart {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+li.wc-block-grid__product {
+  text-align: right;
+}
+
+@media (max-width: 575px) {
+  li.product .entry-item-content .added_to_cart,
+  .entry-item-product .entry-item-content .added_to_cart {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,100 @@
+/* -----------------------------------------
+	Navigation
+----------------------------------------- */
+
+/* Main Navigation
+========================================= */
+.navigation-main {
+	display: flex;
+	align-items: center;
+
+	// Sub-menu containers
+	ul {
+		padding: 15px 5px;
+		min-width: 220px;
+		box-shadow: 0 0 24px rgba(#000, .08);
+		border-radius: var(--ignition-theme-border-radius-base);
+	}
+
+	> li {
+		> ul {
+			&::before {
+				content: "";
+				position: absolute;
+				top: -12px;
+				left: 10px;
+				border: 6px solid transparent;
+				border-bottom-color: transparent;
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+
+	// First Level Menu Links
+	// -----------------------------------
+	// Default Styles
+	> li > a {
+		padding: 17px 0;
+		margin: 0 12px;
+		position: relative;
+		color: currentColor;
+	}
+
+	// Sub-Menu Links
+	// -----------------------------------
+
+	// Default Styles
+	li li a {
+		padding: 6px 15px;
+	}
+
+	// Nav button
+	// -----------------------------------
+
+	.nav-button {
+		> a {
+			border-radius: var(--ignition-theme-border-radius-base);
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	// First menu item display
+	> .menu-item-first {
+		@include media-breakpoint-up(xl) {
+			width: 210px;
+		}
+	}
+
+	// Offset menu items to the far end
+	> .menu-item-pull {
+		@include media-breakpoint-up(xl) {
+			margin-left: auto !important;
+		}
+	}
+}
+
+/* Mobile Navigation
+========================================= */
+.head-content-slot-mobile-nav {
+	flex: none;
+	margin-right: 10px;
+}
+
+.mobile-nav-trigger {
+	font-weight: var(--ignition-font-weight-normal);
+	margin: 0;
+	color: currentColor;
+	border-radius: var(--ignition-theme-border-radius-base);
+	height: 40px;
+	padding: 0 12px;
+	border: 1px solid;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: normal;
+	flex: none;
+}

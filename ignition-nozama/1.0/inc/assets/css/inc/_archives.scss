@@ -1,0 +1,98 @@
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+
+/* Main Archive Styles
+========================================= */
+.entry-item {
+	position: relative;
+	border: 1px solid transparent;
+	border-radius: var(--ignition-theme-border-radius-base);
+	text-align: left;
+
+	.entry-meta {
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+
+	.btn-entry-more {
+		padding: 5px 15px;
+		font-size: 14px;
+	}
+
+	&.entry-item-media {
+		border: 0;
+		border-radius: 0;
+
+		.entry-meta {
+			font-size: 1rem;
+		}
+	}
+}
+
+.entry-item-thumb {
+	margin-bottom: 0;
+
+	img {
+		border-radius: var(--ignition-theme-border-radius-base) var(--ignition-theme-border-radius-base) 0 0;
+	}
+}
+
+.entry-item-content {
+	padding: 20px 20px 15px;
+	text-align: left;
+}
+
+.entry-item-title {
+	font-size: 16px;
+	line-height: normal;
+	margin-bottom: 25px;
+	font-weight: var(--ignition-font-weight-base);
+
+	+ .entry-meta {
+		margin-top: -20px;
+	}
+}
+
+.entry-item-title,
+.entry-title {
+	a {
+		color: currentColor;
+	}
+}
+
+.entry-thumb {
+	img {
+		border-radius: var(--ignition-theme-border-radius-base);
+	}
+}
+
+/* Pagination
+========================================= */
+.navigation,
+.woocommerce-pagination {
+	background-color: var(--ignition-colors-grey);
+	border-radius: var(--ignition-theme-border-radius-base);
+	padding: 10px;
+
+	a,
+	.page-numbers {
+		border: 0;
+		padding: 0;
+		background: none;
+
+		&:hover {
+			background: none;
+		}
+
+		&.current {
+			background: none;
+		}
+	}
+}
+
+.page-links {
+	.page-number {
+		border-radius: var(--ignition-theme-border-radius-base);
+	}
+}

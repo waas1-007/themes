@@ -1,0 +1,67 @@
+/* -----------------------------------------
+ Content Styles
+----------------------------------------- */
+
+/* Content Layout
+========================================= */
+
+// Extra left/right spacing in content wrappers
+// ==============================================
+.has-sidebar {
+	&:not(.layout-reverse) {
+		> [class^="col"] {
+			&:first-child {
+				@include media-breakpoint-up(xl) {
+					padding-right: $grid-gutter-width-base / 2;
+				}
+			}
+		}
+	}
+
+	&.layout-reverse {
+		> [class^="col"] {
+			&:first-child {
+				@include media-breakpoint-up(xl) {
+					padding-left: $grid-gutter-width-base / 2;
+				}
+			}
+		}
+	}
+}
+
+/* Content
+========================================= */
+.entry-content {
+	> * {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 20px;
+	}
+
+	.entry-title {
+		margin-bottom: 0;
+	}
+
+	> &:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Entry Author
+========================================= */
+.entry-author-thumbnail {
+	img {
+		border-radius: var(--ignition-theme-border-radius-base);
+	}
+}

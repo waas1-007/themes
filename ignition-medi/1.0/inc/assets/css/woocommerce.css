@@ -1,0 +1,302 @@
+/* -----------------------------------------
+	WooCommerce Styling
+----------------------------------------- */
+
+/* General
+========================================= */
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce-noreviews,
+.woocommerce-thankyou-order-received,
+p.no-comments {
+  font-size: 14px;
+  border-radius: var(--ignition-medi-border-radius-base);
+  background: none;
+  border: 2px solid var(--ignition-border-color);
+}
+
+.woocommerce-error {
+  border-color: var(--ignition-colors-red);
+}
+
+.onsale {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+/* Single Product
+========================================= */
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__image,
+.single-product div.product .woocommerce-product-gallery .flex-viewport {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs img {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  top: 10px;
+  right: 25px;
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.single-product div.product .onsale {
+  top: 10px;
+  left: 25px;
+  right: auto;
+}
+
+.qty-minus {
+  border-radius: var(--ignition-medi-border-radius-base) 0 0 var(--ignition-medi-border-radius-base);
+}
+
+.qty-plus {
+  border-radius: 0 var(--ignition-medi-border-radius-base) var(--ignition-medi-border-radius-base) 0;
+}
+
+/* Shop Listing
+========================================= */
+
+.shop-filter-toggle {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.entry-item-product img,
+li.product img {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.entry-item-product .woocommerce-loop-product__link .onsale,
+li.product .woocommerce-loop-product__link .onsale {
+  top: 10px;
+  right: 25px;
+  left: auto;
+}
+
+.entry-item-product .woocommerce-loop-category__title,
+.entry-item-product .woocommerce-loop-product__title,
+li.product .woocommerce-loop-category__title,
+li.product .woocommerce-loop-product__title {
+  font-size: 18px;
+}
+
+.entry-item-product .button,
+.entry-item-product .add_to_cart_button,
+li.product .button,
+li.product .add_to_cart_button {
+  padding: 8px 18px;
+}
+
+.added_to_cart {
+  padding: 8px 18px;
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.entry-item-product .woocommerce-loop-product__link .onsale {
+  right: 10px;
+}
+
+.ignition-products-images-layout-list .woocommerce-product-gallery__image img {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+/* Checkout Progress/Steps
+========================================= */
+
+.woocommerce-checkout-progress {
+  padding-top: 80px;
+}
+
+/* Cart Page
+========================================= */
+
+.cart-collaterals {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.cart_totals .checkout-button {
+  font-size: 16px;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__contents .product-remove a {
+  font-size: 32px;
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__contents .product-remove a:hover {
+  text-decoration: none;
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__contents .product-thumbnail .remove {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__contents .product-quantity .quantity .qty {
+  font-size: 14px;
+}
+
+/* Checkout Page
+========================================= */
+
+.ignition-checkout-order {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.place-order [type=submit] {
+  font-size: 16px;
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+/* Order Confirmation Page
+========================================= */
+
+.woocommerce-order-details,
+.woocommerce-bacs-bank-details,
+.woocommerce-order-overview,
+.woocommerce-customer-details address {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* WIDGET: Products
+========================================= */
+
+.product_list_widget img {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+.product_list_widget .widget-product-content-wrap > a {
+  font-size: 14px;
+}
+
+/* WIDGET: Product Search
+========================================= */
+
+.woocommerce-product-search button[type=submit] {
+  border-radius: 0 var(--ignition-medi-border-radius-base) var(--ignition-medi-border-radius-base) 0;
+}
+
+/* -----------------------------------------
+ Blocks
+----------------------------------------- */
+
+/* BLOCK: Product Listings
+========================================= */
+
+li.wc-block-grid__product img {
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+li.wc-block-grid__product .wc-block-grid__product-title {
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: var(--ignition-medi-letter-spacing-base);
+}
+
+li.wc-block-grid__product .wc-block-grid__product-onsale {
+  top: 10px !important;
+  right: 25px;
+  left: auto !important;
+  border-radius: var(--ignition-medi-border-radius-base);
+}
+
+li.wc-block-grid__product .wc-block-grid__product-image .wc-block-grid__product-onsale {
+  right: 10px;
+}
+
+li.wc-block-grid__product .button,
+li.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link {
+  font-size: 14px;
+  padding: 8px 18px;
+}
+
+.wc-block-layout .wc-block-components-product-image .wc-block-components-product-sale-badge--alignright {
+  right: 10px;
+}
+
+.wc-block-pagination .wc-block-pagination-page {
+  border-radius: var(--ignition-medi-border-radius-base);
+  padding: 11px 18px;
+  font-size: 14px;
+}
+
+/* BLOCK: Featured Category
+========================================= */
+
+.wc-block-featured-category {
+  border-radius: var(--ignition-medi-border-radius-base);
+  overflow: hidden;
+}
+
+/* BLOCK: Featured Product
+========================================= */
+
+.wc-block-featured-product {
+  border-radius: var(--ignition-medi-border-radius-base);
+  overflow: hidden;
+}
+
+/* BLOCK: Product Categories
+========================================= */
+
+.wc-block-product-categories-list {
+  font-size: 14px;
+}
+
+.wc-block-product-search__label {
+  font-weight: var(--ignition-font-weight-bold);
+}
+
+/* Theme Colors
+========================================= */
+
+.entry-item-product .woocommerce-loop-product__title,
+li.product .woocommerce-loop-category__title,
+li.product .woocommerce-loop-product__title,
+.product_list_widget li > a,
+.product_list_widget .widget-product-content-wrap > a,
+li.wc-block-grid__product .wc-block-grid__product-link,
+li.wc-block-grid__product .wc-block-grid__product-title a {
+  color: var(--ignition-primary-color);
+}
+
+.entry-item-product > a:hover .woocommerce-loop-product__title,
+li.product > a:hover .woocommerce-loop-category__title,
+li.product > a:hover .woocommerce-loop-product__title,
+.product_list_widget li > a:hover,
+.product_list_widget .widget-product-content-wrap > a:hover,
+li.wc-block-grid__product .wc-block-grid__product-link:hover,
+li.wc-block-grid__product .wc-block-grid__product-title a:hover,
+.wc-block-layout .wc-block-grid .wc-block-components-product-title a:hover {
+  color: var(--ignition-secondary-color);
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger,
+.onsale {
+  background-color: var(--ignition-secondary-color);
+}
+
+@media (min-width: 1230px) {
+  .ignition-products-images-layout-thumbnails-right div.product:not(.ignition-product-gallery-image-count-0) .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+    right: 165px;
+  }
+
+  .ignition-products-images-layout-thumbnails-left div.product:not(.ignition-product-gallery-image-count-0) .onsale {
+    left: 165px;
+  }
+}
+
+@media (max-width: 991px) {
+  .woocommerce-checkout-progress {
+    padding-top: 60px;
+  }
+}

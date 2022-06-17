@@ -1,0 +1,38 @@
+/* -----------------------------------------
+ Widgets
+----------------------------------------- */
+
+/* General
+=================================== */
+.widget {
+	@media (max-height: 768px) {
+		margin-bottom: 40px;
+	}
+}
+
+.rssSummary {
+	text-transform: none;
+	font-size: 14px;
+}
+
+/* Tag Cloud Widget
+=================================== */
+.tag-cloud-link {
+	padding: 4px 16px;
+}
+
+/* Item Widget
+=================================== */
+.ignition-widget-item {
+	.ignition-widget-item-title {
+		font-size: 14px;
+
+		a {
+			color: currentColor;
+		}
+	}
+
+	.ignition-widget-item-subtitle {
+		font-size: 13px;
+	}
+}

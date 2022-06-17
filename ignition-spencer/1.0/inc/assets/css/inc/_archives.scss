@@ -1,0 +1,164 @@
+/* -----------------------------------------
+ Archive Styles
+----------------------------------------- */
+.entry-item {
+	margin: 0 0 70px;
+	text-align: left;
+
+	.entry-section & {
+		margin-bottom: 30px;
+	}
+}
+
+.entry-header {
+	text-align: center;
+	margin-bottom: 50px;
+
+	.row-columns-2 &,
+	.row-columns-3 & {
+		margin-bottom: 25px;
+
+		.entry-meta {
+			font-size: 11px;
+		}
+	}
+
+	.entry-item-media & {
+		text-align: left;
+		margin-bottom: 25px;
+	}
+}
+
+.entry-title {
+	font-weight: 700;
+	font-size: 28px;
+	letter-spacing: -0.75px;
+	margin-bottom: 15px;
+
+	.row-columns-2 &,
+	.row-columns-3 & {
+		font-size: 18px;
+	}
+}
+
+.entry-item-title {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: -0.025em;
+	font-weight: var(--ignition-font-weight-bold);
+	line-height: normal;
+	word-wrap: break-word;
+
+	+ .entry-meta {
+		margin-bottom: 20px;
+	}
+}
+
+.entry-item-title,
+.entry-title {
+	a {
+		color: currentColor;
+	}
+}
+
+.entry-item-thumb {
+	margin-bottom: 20px;
+}
+
+.entry-thumb {
+	margin-bottom: 50px;
+
+	.row-columns-2 &,
+	.row-columns-3 & {
+		margin-bottom: 30px;
+	}
+}
+
+.entry-meta {
+	font-size: 14px;
+
+	.entry-header & {
+		letter-spacing: .2em;
+	}
+}
+
+.entry-meta,
+.entry-categories {
+	.entry-header & {
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+}
+
+.entry-categories {
+	margin-bottom: 10px;
+	letter-spacing: -0.025em;
+	display: block;
+
+	.entry-header & {
+		font-weight: 700;
+	}
+}
+
+.entry-meta {
+	.entry-comments-link {
+		letter-spacing: -0.025em;
+		font-weight: 700;
+	}
+}
+
+.entry-item-excerpt {
+	font-size: inherit;
+}
+
+.entry-item-content {
+	text-align: left;
+}
+
+.entry-more-wrap {
+	text-align: center;
+	position: relative;
+	margin-top: 25px;
+}
+
+.btn.entry-more-btn {
+	background-color: var(--ignition-body-background-color);
+	color: var(--ignition-text-color);
+	border-width: 2px;
+	border-style: solid;
+
+	&:hover {
+		color: inherit;
+	}
+
+	.entry-more-wrap & {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			border-bottom: 1px solid var(--ignition-border-color);
+			z-index: -1;
+		}
+	}
+}
+
+// Alternative entry item styling overrides
+//
+
+.is-style-ignition-spencer-item-alt {
+	.woocommerce-loop-product__title {
+		font-size: 18px;
+	}
+
+	.entry-item-product {
+		.entry-item-content-wrap {
+			text-align: center;
+
+			.price {
+				font-size: 1.1em;
+			}
+		}
+	}
+}
