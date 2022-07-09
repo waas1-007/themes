@@ -413,7 +413,7 @@ msgstr ""
 
 #: inc/functions-frontend.php:97
 msgid "Tags: "
-msgstr ""
+msgstr "صفات:"
 
 #: inc/functions-frontend.php:153 inc/functions-frontend.php:155
 #: inc/functions-frontend.php:288
@@ -939,7 +939,7 @@ msgstr ""
 #: inc/template-tags.php:102
 msgctxt "Used before tag names."
 msgid "Tags"
-msgstr ""
+msgstr "صفات"
 
 #: inc/template-tags.php:113
 msgctxt "Used before full size attachment link."
@@ -1053,12 +1053,12 @@ msgstr ""
 #: inc/vendors/cmb2/page.php:73
 #: inc/vendors/redux-framework/redux-config.php:127
 msgid "Header Layout Type"
-msgstr ""
+msgstr "شكل الهيدر"
 
 #: inc/vendors/cmb2/page.php:74 inc/vendors/cmb2/page.php:82
 #: inc/vendors/redux-framework/redux-config.php:128
 msgid "Choose a header for your website."
-msgstr ""
+msgstr "اختار شكل الهيدر "
 
 #: inc/vendors/cmb2/page.php:81
 msgid "Header Transparent"
@@ -1260,24 +1260,24 @@ msgstr "عام"
 #: inc/vendors/redux-framework/redux-config.php:110
 #: inc/vendors/redux-framework/redux-config.php:649
 msgid "Header"
-msgstr ""
+msgstr "هيدر"
 
 #: inc/vendors/redux-framework/redux-config.php:115
 msgid "Logo Upload"
-msgstr ""
+msgstr "رفع اللوجو"
 
 #: inc/vendors/redux-framework/redux-config.php:116
 #: inc/vendors/redux-framework/redux-config.php:122
 msgid "Upload a .png or .gif image that will be your logo."
-msgstr ""
+msgstr "قم برفع ملفات من نوع .png أو .gif "
 
 #: inc/vendors/redux-framework/redux-config.php:121
 msgid "Mobile Logo Upload"
-msgstr ""
+msgstr "رفع لوجو الموبايل"
 
 #: inc/vendors/redux-framework/redux-config.php:134
 msgid "Keep Header"
-msgstr ""
+msgstr "إظهار الهيدر"
 
 #: inc/vendors/redux-framework/redux-config.php:140
 msgid "Search Header"
@@ -3393,7 +3393,7 @@ msgstr ""
 
 #: template-parts/sharebox.php:8
 msgid "Share Link:"
-msgstr ""
+msgstr "مشاركة الرابط:"
 
 #: template-parts/sharebox.php:11
 msgid "Share on facebook"
@@ -3972,22 +3972,22 @@ msgstr ""
 #: woocommerce/single-product/meta.php:35
 msgid "Category:"
 msgid_plural "Categories:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "تصنيف:"
+msgstr[1] "تصنيف:"
+msgstr[2] "تصنيف:"
+msgstr[3] "تصنيف:"
+msgstr[4] "تصنيف:"
+msgstr[5] "تصنيف:"
 
 #: woocommerce/single-product/meta.php:37
 msgid "<span class=\"sub_title\">Tag:</span>"
 msgid_plural "<span class=\"sub_title\">Tags:</span>"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "صفة"
+msgstr[1] "صفة"
+msgstr[2] "صفتان"
+msgstr[3] "صفات"
+msgstr[4] "صفات"
+msgstr[5] "صفات"
 
 #: woocommerce/single-product/product-image.php:42
 msgid "Watch video"
