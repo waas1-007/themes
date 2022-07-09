@@ -1255,7 +1255,7 @@ msgstr ""
 
 #: inc/vendors/redux-framework/redux-config.php:104
 msgid "General"
-msgstr ""
+msgstr "عام"
 
 #: inc/vendors/redux-framework/redux-config.php:110
 #: inc/vendors/redux-framework/redux-config.php:649
