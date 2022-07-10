@@ -3454,7 +3454,7 @@ msgstr ""
 
 #: vc_templates/apus_products_tabs.php:71
 msgid "go to shop"
-msgstr ""
+msgstr "تسوق الآن"
 
 #: vc_templates/apus_socials_link.php:7
 msgid "Youtube"
