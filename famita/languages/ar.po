@@ -3699,7 +3699,7 @@ msgstr ""
 
 #: woocommerce/checkout/form-billing.php:29
 msgid "Billing details"
-msgstr ""
+msgstr "معلومات الدفع"
 
 #: woocommerce/checkout/form-billing.php:54
 msgid "Create an account?"
@@ -3711,7 +3711,7 @@ msgstr ""
 
 #: woocommerce/checkout/form-checkout.php:51
 msgid "Your order"
-msgstr ""
+msgstr "طلبك"
 
 #: woocommerce/checkout/form-shipping.php:27
 msgid "Ship to a different address?"
