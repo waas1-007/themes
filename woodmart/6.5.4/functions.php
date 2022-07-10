@@ -3,7 +3,7 @@
  *
  * The framework's functions and definitions
  */
-update_option( 'woodmart_is_activated', '1' );
+
 define( 'WOODMART_THEME_DIR', get_template_directory_uri() );
 define( 'WOODMART_THEMEROOT', get_template_directory() );
 define( 'WOODMART_IMAGES', WOODMART_THEME_DIR . '/images' );

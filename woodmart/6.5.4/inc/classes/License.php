@@ -1,10 +1,6 @@
 <?php if ( ! defined( 'WOODMART_THEME_DIR' ) ) {
 	exit( 'No direct script access allowed' );}
 
-	update_option( 'woodmart_token', true );
-        update_option( 'woodmart_is_activated', true );
-        update_option( 'woodmart_purchase_code', 'valid' );
-
 /**
  * Activate theme and enable auto updates
  */
@@ -115,7 +111,42 @@ class WOODMART_License {
 			return;
 		}
 
-	
+		if ( isset( $_POST['woodmart-purchase-code'] ) && ( ! isset( $_POST['agree_stored'] ) || empty( $_POST['agree_stored'] ) ) ) {
+			$this->_notices->add_error( 'You must agree to store your purchase code and user data by xtemos.com' );
+			return;
+		}
+
+		if ( ! isset( $_POST['purchase-code'] ) || empty( $_POST['purchase-code'] ) ) {
+			return;
+		}
+
+		$code = sanitize_text_field( $_POST['purchase-code'] );
+
+		$response = $this->_api->call( 'activate/' . $code . '?domain=' . $this->domain() );
+
+		if ( isset( $_GET['xtemos_debug'] ) ) {
+			ar( $response );
+		}
+
+		$response_code = wp_remote_retrieve_response_code( $response );
+
+		if ( $response_code != '200' ) {
+			$this->_notices->add_error( 'The API server can\'t be reached. Please, contact your hosting provider to check the connectivity with our xtemos.com server. If you need further help, please, contact our support center too.' );
+			return;
+		}
+
+		$data = json_decode( wp_remote_retrieve_body( $response ), true );
+
+		if ( isset( $data['error'] ) ) {
+			$this->_notices->add_error( $data['error'] );
+			return;
+		}
+
+		if ( ! $data['verified'] ) {
+			$this->_notices->add_error( 'The purchase code is invalid. <a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-">Where can I get my purchase code?</a>' );
+			return;
+		}
+
 		$this->activate( $code, $data['token'] );
 
 		$this->_notices->add_success( 'The license is verified and theme is activated successfully. Auto updates function is enabled.' );
