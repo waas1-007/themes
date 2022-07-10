@@ -3784,7 +3784,7 @@ msgstr ""
 
 #: woocommerce/content-product_header.php:25
 msgid "Filters"
-msgstr ""
+msgstr "تصفية"
 
 #: woocommerce/content-product_results_bar.php:13
 msgid "Showing &ldquo;%s&rdquo;"
@@ -3800,7 +3800,7 @@ msgstr ""
 
 #: woocommerce/content-product_results_bar.php:37
 msgid "Clear Filters (%s)"
-msgstr ""
+msgstr "مسح (%s)"
 
 #: woocommerce/item-product/inner-list.php:63
 #: woocommerce/item-product/inner.php:43
